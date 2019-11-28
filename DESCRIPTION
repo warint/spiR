@@ -1,0 +1,17 @@
+Package: spiR
+Type: Package
+Title: Client for Social Progress Index Data
+Version: 0.1.0
+Authors@R: c(
+    person("Thibault", "Senegas", email = "thibault.senegas@skema.edu", role =c("aut", "cre")),
+    person("Thierry", "Warrin", role = "aut"))
+Description: The spirR package allows an easy connection with R to the Social Progress Index.
+Imports: gsheet, dplyr
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
