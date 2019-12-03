@@ -122,7 +122,7 @@ If no arguments are filed, all data will be displayed.</p>
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>country</th>
-      <td><p>Countries' ISO code.</p></td>
+      <td><p>country Countries' ISO code.</p></td>
     </tr>
     <tr>
       <th>years</th>
@@ -137,15 +137,26 @@ If no arguments are filed, all data will be displayed.</p>
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>Data for the country, indicator and year requested</p>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p><code><a href='sqs_spi_indicator.html'>sqs_spi_indicator</a></code> for the SPI's indicator symbol and <code><a href='sqs_spi_country.html'>sqs_spi_country</a></code> for the country's ISO code.</p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>mydata2</span> <span class='kw'>&lt;-</span> <span class='fu'>sqs_spi_data</span>(, , )</div></pre>
+    <pre class="examples"><div class='input'><span class='no'>myData</span><span class='kw'>&lt;-</span> <span class='fu'>sqs_spi_data</span>(<span class='kw'>country</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"USA"</span>, <span class='st'>"FRA"</span>), <span class='kw'>years</span> <span class='kw'>=</span> <span class='st'>"2018"</span>, )
+<span class='no'>myData</span><span class='kw'>&lt;-</span> <span class='fu'>sqs_spi_data</span>(<span class='kw'>country</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"USA"</span>, <span class='st'>"FRA"</span>), <span class='kw'>year</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"2018"</span>, <span class='st'>"2019"</span>), <span class='kw'>indicators</span> <span class='kw'>=</span> <span class='st'>"SPI"</span>)
+<span class='no'>myData</span><span class='kw'>&lt;-</span> <span class='fu'>sqs_spi_data</span>(<span class='st'>"USA"</span>, <span class='st'>"2019"</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"SPI"</span>, <span class='st'>"FOW"</span>))
+<span class='no'>myData</span><span class='kw'>&lt;-</span> <span class='fu'>sqs_spi_data</span>(, <span class='st'>"2018"</span>, )
+<span class='no'>myData</span><span class='kw'>&lt;-</span> <span class='fu'>sqs_spi_data</span>(<span class='st'>"USA"</span>, <span class='st'>"2017"</span>, )
+<span class='no'>myData</span><span class='kw'>&lt;-</span> <span class='fu'>sqs_spi_data</span>(<span class='st'>"USA"</span>, , )
+<span class='no'>myData</span><span class='kw'>&lt;-</span> <span class='fu'>sqs_spi_data</span>(, , )
+<span class='no'>myData</span><span class='kw'>&lt;-</span> <span class='fu'>sqs_spi_data</span>()</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
       <li><a href="#value">Value</a></li>
+      <li><a href="#see-also">See also</a></li>
       <li><a href="#examples">Examples</a></li>
     </ul>
 

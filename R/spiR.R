@@ -108,7 +108,7 @@ sqs_spi_indicator <- function(indicators) {
 #'
 #' @return Country's ISO code.
 #' @export
-#' @seealso \code{\link{sqs_spi_indicator}} for the SPI's indicator symbol and \code{\link{sqs_spi_country}} for the SPI's country code.
+#' @seealso \code{\link{sqs_spi_indicator}} for the SPI's indicators and \code{\link{sqs_spi_data}} to collect data when you have both indicator and country code.
 #' @examples
 #'mycountry <- sqs_spi_country()
 #'mycountry <- sqs_spi_country(country = "Canada")
