@@ -13,7 +13,6 @@ data_long <- reshape2::melt(spi_data,
   value.name = "value"
 )
 
-
 # Creating the default values for the function query
 # IF an entry is missing, all the observations of this variable will be displayed
 
