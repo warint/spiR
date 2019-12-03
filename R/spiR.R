@@ -1,23 +1,51 @@
 
+
+# Function 1: Data collection
+
+
 #' sqs_spi_data
 #'
 #' @description This function allows you to find and display the Social Progress Index data according to the selected parameters.
 #' If no arguments are filed, all data will be displayed.
-#' @param country Countries' ISO code.
+#'
+#' @param country country Countries' ISO code.
 #' @param years Years for which you want data.
 #' @param indicators Indicators from the Social Progress Index.
 #'
 #' @import gsheet
 #' @import dplyr
+#' @import reshape2
 #'
 #' @return Data for the country, indicator and year requested
 #' @export
 #'
+#' @seealso \code{\link{sqs_spi_indicator}} for the SPI's indicator symbol and \code{\link{sqs_spi_country}} for the country's ISO code.
+#'
 #' @examples
-#'mydata2 <- sqs_spi_data(, , )
+#' myData<- sqs_spi_data(country = c("USA", "FRA"), years = "2018", )
+#' myData<- sqs_spi_data(country = c("USA", "FRA"), year = c("2018", "2019"), indicators = "SPI")
+#' myData<- sqs_spi_data("USA", "2019", c("SPI", "FOW"))
+#' myData<- sqs_spi_data(, "2018", )
+#' myData<- sqs_spi_data("USA", "2017", )
+#' myData<- sqs_spi_data("USA", , )
+#' myData<- sqs_spi_data(, , )
+#' myData<- sqs_spi_data()
+#'
+#'
+#
 
 
-# Function 1: Data collection
+
+
+sqs_spi_data <- function(country = data_long_country,
+                         years = data_long_year,
+                         indicators = data_long_indicator) {
+  out <- dplyr::filter(data_long,
+                       code %in% country,
+                       year %in% years,
+                       indicator %in% indicators)
+  return(out)
+}
 
 spi_data <- gsheet::gsheet2tbl("https://docs.google.com/spreadsheets/d/1_nQ9mQU_4J0KDRc4_TMzTsJHMYBqLwwnPaMC5BVhkGc/edit#gid=0")
 
@@ -39,32 +67,24 @@ data_long_country <- base::unique(data_long[, 2])
 data_long_year <- base::unique(data_long[, 3])
 data_long_indicator <- base::unique(data_long[, 4])
 
-sqs_spi_data <- function(country = data_long_country,
-                         years = data_long_year,
-                         indicators = data_long_indicator) {
-  out <- dplyr::filter(data_long,
-                       code %in% country,
-                       year %in% years,
-                       indicator %in% indicators)
-  return(out)
-}
 
 # Function 2: Indicators' symbols query
 # If the user does not know the code of an indicator, s.he has access to the answer in natural language through this query
 
-#' sqs_spi_symbol
+#' sqs_spi_indicator
 #'
 #' @description This function allows you to find and search the right indicator code from the Social Progress Index you want to use.
 #' If no argument is filed, all indicators will be displayed.
 #' @param indicators An indicator from the Social Progress Index.
-#' @description This function allows you to find and search the right indicator code from the Social Progress Index you want to use.
+#'
 #' @return Indicator code from the Social Progress Index.
 #' @export
+#' @seealso \code{\link{sqs_spi_country}} for the SPI's country code and \code{\link{sqs_spi_data}} to collect data when you have both indicator and country code.
 #'
 #' @examples
-#'mysymbol <- sqs_spi_symbol()
-#'mysymbol <- sqs_spi_symbol(indicators = "mortality")
-#'mysymbol <- sqs_spi_symbol("mortality")
+#'myIndicator <- sqs_spi_indicator()
+#'myIndicator <- sqs_spi_indicator(indicators = "mortality")
+#'myIndicator <- sqs_spi_indicator("mortality")
 #'
 
 
@@ -88,7 +108,7 @@ sqs_spi_indicator <- function(indicators) {
 #'
 #' @return Country's ISO code.
 #' @export
-#'
+#' @seealso \code{\link{sqs_spi_indicator}} for the SPI's indicator symbol and \code{\link{sqs_spi_country}} for the SPI's country code.
 #' @examples
 #'mycountry <- sqs_spi_country()
 #'mycountry <- sqs_spi_country(country = "Canada")

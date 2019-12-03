@@ -3,3 +3,6 @@
 ^README\.Rmd$
 ^LICENSE\.md$
 ^\.travis\.yml$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$

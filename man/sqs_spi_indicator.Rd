@@ -2,7 +2,7 @@
 % Please edit documentation in R/spiR.R
 \name{sqs_spi_indicator}
 \alias{sqs_spi_indicator}
-\title{sqs_spi_symbol}
+\title{sqs_spi_indicator}
 \usage{
 sqs_spi_indicator(indicators)
 }
@@ -15,12 +15,13 @@ Indicator code from the Social Progress Index.
 \description{
 This function allows you to find and search the right indicator code from the Social Progress Index you want to use.
 If no argument is filed, all indicators will be displayed.
-
-This function allows you to find and search the right indicator code from the Social Progress Index you want to use.
 }
 \examples{
-mysymbol <- sqs_spi_symbol()
-mysymbol <- sqs_spi_symbol(indicators = "mortality")
-mysymbol <- sqs_spi_symbol("mortality")
+myIndicator <- sqs_spi_indicator()
+myIndicator <- sqs_spi_indicator(indicators = "mortality")
+myIndicator <- sqs_spi_indicator("mortality")
 
+}
+\seealso{
+\code{\link{sqs_spi_country}} for the SPI's country code and \code{\link{sqs_spi_data}} to collect data when you have both indicator and country code.
 }

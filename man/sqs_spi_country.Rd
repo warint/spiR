@@ -22,3 +22,6 @@ mycountry <- sqs_spi_country(country = "Canada")
 mycountry <- sqs_spi_country("Canada")
 
 }
+\seealso{
+\code{\link{sqs_spi_indicator}} for the SPI's indicator symbol and \code{\link{sqs_spi_country}} for the SPI's country code.
+}
