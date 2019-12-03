@@ -1,0 +1,82 @@
+---
+title: "spiRData"
+author: "Thierry Warin"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{spiR}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(spiR)
+```
+
+
+## Overview
+
+statcanR provides the R user with a consistent process to collect data from Statistics Canada's data portal. It provides access to all Statistics Canada' open economic data (formerly known as CANSIM tables) now identified by product IDs (PID) by the new Statistics Canada's Web Data Service: <https://www150.statcan.gc.ca/n1/en/type/data>.
+
+## Quick start
+
+First, install spiR:
+
+```{r, eval=FALSE}
+devtools::install_github("warint/spiR")
+```
+
+
+Next, call spiR to make sure everything is installed correctly.
+
+```{r}
+library(spiR)
+```
+
+# Practical usage
+
+This section presents an example of how to use the statcanR R package and its function sqs_statcan_data().    
+  
+
+The following example is provided to illustrate how to use the function. It consists in collecting some descriptive statistics about the Canadian labour force at the federal, provincial and industrial levels, on a monthly basis.  
+
+With a simple web search 'statistics canada wages by industry metropolitan area monthly', the table number can easily be found on Statisitcs Canada's webpage. Here is below a figure that illustrates this example, such as '14-10-0063-01' for the Employee wages by industry, monthly, unadjusted for seasonality at the ferederal and provincial levels.
+
+Once the table number is identified, the sqs_statcan_data() function is easy to use in order to collect the data, as following:  
+  
+```{r, eval=FALSE}
+# Get data with sqs_statcan_data function
+mydata <- sqs_statcan_data("14-10-0063-01", "eng")
+```
+
+Should you want the same data in French, just replace the argument at the end of the function with "fra".
+
+
+## Examples
+
+This section describes the code architecture of the statcanR package.
+
+
+sqs_spi_data(country = c("USA", "FRA"), years = "2018", )
+sqs_spi_data(country = c("USA", "FRA"), year = c("2018", "2019"), indicators = "SPI")
+sqs_spi_data("USA", "2019", c("SPI", "FOW"))
+sqs_spi_data(, "2018", )
+sqs_spi_data("USA", "2017", )
+sqs_spi_data("USA", , )
+sqs_spi_data(, , )
+sqs_spi_data()
+
+sqs_spi_country()
+sqs_spi_country(country = "Canada")
+sqs_spi_country("Canada")
+
+sqs_spi_symbol()
+sqs_spi_symbol(indicators = "mortality")
+sqs_spi_symbol("mortality")
+

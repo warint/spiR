@@ -26,31 +26,28 @@ The goal of spiR is to allow an easy connection with R to the Social Progress In
 
 You can install the released version of spiR from [CRAN](https://CRAN.R-project.org) with:
 
-``` r
+```{r, eval = FALSE}
 install.packages("spiR")
 ```
 
-## Example
 
-This is a basic example which shows you how to solve a common problem:
+## Examples
 
-```{r example}
-library(spiR)
-## basic example code
-```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+sqs_spi_data(country = c("USA", "FRA"), years = "2018", )
+sqs_spi_data(country = c("USA", "FRA"), year = c("2018", "2019"), indicators = "SPI")
+sqs_spi_data("USA", "2019", c("SPI", "FOW"))
+sqs_spi_data(, "2018", )
+sqs_spi_data("USA", "2017", )
+sqs_spi_data("USA", , )
+sqs_spi_data(, , )
+sqs_spi_data()
 
-```{r cars}
-summary(cars)
-```
+sqs_spi_country()
+sqs_spi_country(country = "Canada")
+sqs_spi_country("Canada")
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
+sqs_spi_symbol()
+sqs_spi_symbol(indicators = "mortality")
+sqs_spi_symbol("mortality")
 
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub!
