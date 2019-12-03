@@ -47,7 +47,7 @@ sqs_spi_country()
 sqs_spi_country(country = "Canada")
 sqs_spi_country("Canada")
 
-sqs_spi_symbol()
-sqs_spi_symbol(indicators = "mortality")
-sqs_spi_symbol("mortality")
+sqs_spi_indicator()
+sqs_spi_indicator(indicators = "mortality")
+sqs_spi_indicator("mortality")
 

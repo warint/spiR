@@ -2,11 +2,11 @@
 
 spi_data <- gsheet::gsheet2tbl("https://docs.google.com/spreadsheets/d/1_nQ9mQU_4J0KDRc4_TMzTsJHMYBqLwwnPaMC5BVhkGc/edit#gid=0")
 
-data_long <- reshape2::melt(SPI_data,
+data_long <- reshape2::melt(spi_data,
   # ID variables - all the variables to keep but not split apart on
   id.vars = c("countryName", "code", "year"),
   # The source columns
-  measure.vars = colnames(SPI_data)[6:ncol(SPI_data)],
+  measure.vars = colnames(spi_data)[6:ncol(spi_data)],
   # Name of the destination column that will identify the original
   # column that the measurement came from
   variable.name = "indicator",
@@ -18,8 +18,8 @@ data_long <- reshape2::melt(SPI_data,
 # IF an entry is missing, all the observations of this variable will be displayed
 
 data_long_country <- base::unique(data_long[, 2])
-data_long_year <- utils::unique(data_long[, 3])
-data_long_indicator <- utils::unique(data_long[, 4])
+data_long_year <- base::unique(data_long[, 3])
+data_long_indicator <- base::unique(data_long[, 4])
 
 sqs_spi_data <- function(country = data_long_country,
                          years = data_long_year,
@@ -47,7 +47,6 @@ sqs_spi_indicator <- function(indicators) {
 # If the user does not know the ISO code of a country, s.he has access to the answer in natural language through this query
 
 sqs_spi_country <- function(country) {
-  spi_data <- gsheet::gsheet2tbl("https://docs.google.com/spreadsheets/d/1_nQ9mQU_4J0KDRc4_TMzTsJHMYBqLwwnPaMC5BVhkGc/edit#gid=0")
   spi_countries_natural_language <- unique(spi_data[, 1:2])
   if (missing(country)) {
     spi_countries_natural_language
