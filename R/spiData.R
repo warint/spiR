@@ -1,6 +1,7 @@
 # Function 1: Data collection
 
 SPI_data <- gsheet::gsheet2tbl("https://docs.google.com/spreadsheets/d/1_nQ9mQU_4J0KDRc4_TMzTsJHMYBqLwwnPaMC5BVhkGc/edit#gid=0")
+
 data_long <- reshape2::melt(SPI_data,
   # ID variables - all the variables to keep but not split apart on
   id.vars = c("countryName", "code", "year"),
@@ -19,7 +20,8 @@ data_long_year <- unique(data_long[, 3])
 data_long_indicator <- unique(data_long[, 4])
 
 sqs_spi_data <- function(country = data_long_country, years = data_long_year, indicators = data_long_indicator) {
-  out <- subset(data_long, code %in% country & year %in% years & indicator %in% indicators)
+  out <- dplyr::filter(data_long, code %in% country & year %in% years & indicator %in% indicators)
+
   return(out)
 }
 
@@ -45,22 +47,3 @@ sqs_spi_country <- function(country) {
     SPI_country[grep(country, SPI_country$countryName), ]
   }
 }
-
-## Examples
-
-sqs_spi_data(country = c("USA", "FRA"), years = "2018", )
-sqs_spi_data(country = c("USA", "FRA"), year = c("2018", "2019"), indicators = "SPI")
-sqs_spi_data("USA", "2019", c("SPI", "FOW"))
-sqs_spi_data(, "2018", )
-sqs_spi_data("USA", "2017", )
-sqs_spi_data("USA", , )
-sqs_spi_data(, , )
-sqs_spi_data()
-
-sqs_spi_country()
-sqs_spi_country(country = "Canada")
-sqs_spi_country("Canada")
-
-sqs_spi_symbol()
-sqs_spi_symbol(indicators = "mortality")
-sqs_spi_symbol("mortality")
