@@ -15,6 +15,8 @@ knitr::opts_chunk$set(
 
 # spiR
 
+# <img src="man/figures/LOGO.png" align="right" />
+
 spiR is an R client to easily access the Social Progress Index database. Published by the Social Progress Imperative, a global non profit based in Washington, DC, the index proposes a new perspective on social challenges and needed efforts to accelerate social progress in line with the Sustainable Development Goals. In this context, the goal of spiR is to allow an easy connection with R to the Social Progress Index in order to benefit from the "power of the crowds."
 
 At the Social Progress Imperative, they define "social progress as the capacity of a society to meet the basic human needs of its citizens, establish the building blocks that allow citizens and communities to enhance and sustain the quality of their lives, and create the conditions for all individuals to reach their full potential. Improving quality of life is a complex task and past efforts to measure progress simply haven’t created a sufficiently nuanced picture of what a successful society looks like. That’s why we created the Social Progress Index. Rather than emphasizing traditional measurements of success like income and investment, we measure 51 social and environmental indicators to create a clearer picture of what life is really like for everyday people. The index doesn’t measure people’s happiness or life satisfaction, focusing instead on actual life outcomes in areas from shelter and nutrition to rights and education. This exclusive focus on measurable outcomes makes the index a useful policy tool that tracks changes in society over time." 
@@ -105,6 +107,14 @@ Warin, T. (2019). spiR: Client for the Social Progress Index. v0.1.0.
  }
 ```
 
+### Why SQS?
+
+SQS stands for SKEMA Quantum Studio, a research and technological development centre based in Montreal, Canada, that serves as the engine room for the SKEMA Global lab in AI.
+
+SKEMA Quantum Studio is also a state-of-the-art platform developed by our team that enables scholars, students and professors to access one of the most powerful analytical tools in higher education. By using data science and artificial intelligence within the platform, new theories, methods and concepts are being developed to study globalisation, innovation and digital transformations that our society faces.
+
+
+To learn more about the SKEMA Quantum Studio and the mission of the SKEMA Global Lab in AI, please visit the following websites : [SQS]( https://quantumstudio.skemagloballab.io) ; [Global Lab](https://skemagloballab.io/).
 
 ### Acknowledgments
 
