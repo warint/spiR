@@ -30,18 +30,16 @@ data_long_indicator <- base::unique(data_long[, 4])
 #'
 #' @return Data for the country, indicator and year requested
 #' @export
-#'
+#' @seealso \code{\link{sqs_spi_symbol}} for the SPI's indicator symbol and \code{\link{sqs_spi_country}} for the country's ISO code.
 #' @examples
-#'sqs_spi_data(country = c("USA", "FRA"), years = "2018", )
-#'sqs_spi_data(country = c("USA", "FRA"), year = c("2018", "2019"), indicators = "SPI")
-#'sqs_spi_data("USA", "2019", c("SPI", "FOW"))
-#'sqs_spi_data(, "2018", )
-#'sqs_spi_data("USA", "2017", )
-#'sqs_spi_data("USA", , )
-#'sqs_spi_data(, , )
-#'sqs_spi_data()
-#'
-#'\seealso{\code{\link{sqs_spi_symbol}} for the SPI's indicator symbol and \code{\link{sqs_spi_country}} for the country's ISO code.
+#'mydata <- sqs_spi_data(country = c("USA", "FRA"), years = "2018", )
+#'mydata <- sqs_spi_data(country = c("USA", "FRA"), year = c("2018", "2019"), indicators = "SPI")
+#'mydata <- sqs_spi_data("USA", "2019", c("SPI", "FOW"))
+#'mydata <- sqs_spi_data(, "2018", )
+#'mydata <- sqs_spi_data("USA", "2017", )
+#'mydata <- sqs_spi_data("USA", , )
+#'mydata <- sqs_spi_data(, , )
+#'mydata <- sqs_spi_data()
 
 
 sqs_spi_data <- function(country = data_long_country,
@@ -65,13 +63,13 @@ sqs_spi_data <- function(country = data_long_country,
 #' @description This function allows you to find and search the right indicator code from the Social Progress Index you want to use.
 #' @return Indicator code from the Social Progress Index.
 #' @export
-#'
+#' @seealso \code{\link{sqs_spi_country}} for the SPI's country code and \code{\link{sqs_spi_data}} to collect data when you have both indicator and country code.
 #' @examples
-#'sqs_spi_symbol()
-#'sqs_spi_symbol(indicators = "mortality")
-#'sqs_spi_symbol("mortality")
+#'mysymbol <- sqs_spi_symbol()
+#'mysymbol <- sqs_spi_symbol(indicators = "mortality")
+#'mysymbol <- sqs_spi_symbol("mortality")
 #'
-#'\seealso{\code{\link{sqs_spi_country}} for the SPI's country code and \code{\link{sqs_spi_data}} to collect data when you have both indicator and country code.
+
 
 sqs_spi_indicator <- function(indicators) {
   spi_indicators_natural_language <- gsheet::gsheet2tbl("https://docs.google.com/spreadsheets/d/1_nQ9mQU_4J0KDRc4_TMzTsJHMYBqLwwnPaMC5BVhkGc/edit#gid=400714513")
@@ -93,11 +91,13 @@ sqs_spi_indicator <- function(indicators) {
 #'
 #' @return Country's ISO code.
 #' @export
+#' @seealso \code{\link{sqs_spi_symbol}} for the SPI's indicator symbol and \code{\link{sqs_spi_country}} for the SPI's country code.
+
 #'
 #' @examples
-#'sqs_spi_country()
-#'sqs_spi_country(country = "Canada")
-#'sqs_spi_country("Canada")
+#'mycountry <- sqs_spi_country()
+#'mycountry <- sqs_spi_country(country = "Canada")
+#'mycountry <- sqs_spi_country("Canada")
 #'
 #'\seealso{\code{\link{sqs_spi_symbol}} for the SPI's indicator symbol and \code{\link{sqs_spi_country}} for the SPI's country code.
 

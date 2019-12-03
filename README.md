@@ -3,53 +3,134 @@
 
 # spiR
 
-Client for Social Progress Index Data
+spiR is an R client to easily access the Social Progress Index database.
+Published by the Social Progress Imperative, a global non profit based
+in Washington, DC, the index proposes a new perspective on social
+challenges and needed efforts to accelerate social progress in line with
+the Sustainable Development Goals. In this context, the goal of spiR is
+to allow an easy connection with R to the Social Progress Index in order
+to benefit from the “power of the crowds.”
 
-<!-- badges: start -->
+At the Social Progress Imperative, they define “social progress as the
+capacity of a society to meet the basic human needs of its citizens,
+establish the building blocks that allow citizens and communities to
+enhance and sustain the quality of their lives, and create the
+conditions for all individuals to reach their full potential. Improving
+quality of life is a complex task and past efforts to measure progress
+simply haven’t created a sufficiently nuanced picture of what a
+successful society looks like. That’s why we created the Social Progress
+Index. Rather than emphasizing traditional measurements of success like
+income and investment, we measure 51 social and environmental indicators
+to create a clearer picture of what life is really like for everyday
+people. The index doesn’t measure people’s happiness or life
+satisfaction, focusing instead on actual life outcomes in areas from
+shelter and nutrition to rights and education. This exclusive focus on
+measurable outcomes makes the index a useful policy tool that tracks
+changes in society over time.”
 
-<!-- badges: end -->
+The index measures the quality of life for 98% of the world’s
+population. In its current version, the R client provides access to
+global data. In further versions, this R client will include different
+geographical levels: states, regions, cities and sometimes communities.
 
-The goal of spiR is to allow an easy connection with R to the Social
-Progress Index
+Three overarching dimensions are (1) Basic Human Needs, (2) Foundations
+of Wellbeing, and (3) Opportunity. Within each dimension, there are four
+components that further divide the indicators into thematic categories.
+The index consists in 51 social and environmental variables, covering
+the years 2014 to 2019. To see a definition of the indicators, please
+visit this
+[page](https://www.socialprogress.org/index/global/definitions/BHN/0/0).
+See below to have access through spiR to the whole list of indicators.
+
+## Overview of the available data
+
+Users can recreate in R impactful dashboards and visualizations as the
+ones found on
+\<www.socialprogress.org\>:
+
+<iframe src="https://www.socialprogress.org/?tab=2&amp;code=NOR&amp;embedded=true" width="1060" height="1100" frameborder="0" frameBorder="0">
+
+</iframe>
 
 ## Installation
 
-You can install the released version of spiR from
-[CRAN](https://CRAN.R-project.org) with:
+You can install the current development version of spiR with:
 
 ``` r
-install.packages("spiR")
+devtools::install_github("warint/spiR")
 ```
 
-## Example
+## How-To
 
-This is a basic example which shows you how to solve a common problem:
+### Step 1: Getting the country’s ISO code
+
+A user needs to enter the ISO code of a country. To have access to this
+code, the following function provides this information.
 
 ``` r
-library(spiR)
-## basic example code
+sqs_spi_country() # A list of all countries will be produced
+
+sqs_spi_country(country = "Canada") # The ISO code for Canada will be produced
+
+sqs_spi_country("Canada") # The ISO code for Canada will be produced
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+### Step 2: Getting the indicator’s code
+
+A user needs to enter the code of the desired indicator. To do so, the
+following function provides access to all the indicators of interest.
 
 ``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
+sqs_spi_indicator() # A list of all countries will be produced
+
+sqs_spi_indicator(indicators = "mortality") # A list with all the variables including "mortlity" will be produced
+
+sqs_spi_indicator("mortality") # A list with all the variables including "mortlity" will be produced
 ```
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date.
+### Step 3: Getting the data
 
-You can also embed plots, for example:
+Once the user knows the ISO code and the indicator’s code, s.he can
+collect the data in a very easy way through this
+function:
 
-<img src="man/figures/README-pressure-1.png" width="100%" />
+``` r
+sqs_spi_data(country = c("USA", "FRA"), year = c("2018", "2019"), indicators = "SPI") # It generates a data frame of the overall SPI indicator for the USA and France for the years 2018 and 2019
 
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub\!
+sqs_spi_data(country = c("USA", "FRA"), years = "2018", ) # It generates a data frame of all the indicators for the USA and France for the year 2018
+
+sqs_spi_data("USA", "2019", c("SPI", "FOW")) # It generates a data frame of the SPI and FOW indicators for the USA in 2019
+
+sqs_spi_data(, "2018", ) # It generates a data frame for all the countries and all the indicators for 2018
+
+sqs_spi_data("USA", "2017", ) # It generates a data frame of all the indicators for the USA in 2017
+
+sqs_spi_data("USA", , ) # It generates a data frame of all the indicators for all the years for the USA
+
+sqs_spi_data(, , ) # It generates a data frame of the complete dataset
+
+sqs_spi_data() # It generates a data frame of the complete dataset
+```
+
+### Cite spiR
+
+To cite the spiR package in your work:
+
+Warin, T. (2019). spiR: Client for the Social Progress Index. v0.1.0.
+
+``` r
+@Manual{R-spiR,
+   title = {spiR: Client for the Social Progress Index},
+   author = {Thierry Warin},
+   note = {R package version 0.1.0},
+   url = {http://github.com/warint/spiR},
+   year = {2019},
+ }
+```
+
+### Acknowledgments
+
+The author would like to thank the Center for Interuniversity Research
+and Analysis of Organizations (CIRANO, Montreal) for its support, as
+well as Thibault Senegas, Marine Leroi and Martin Paquette at SKEMA
+Global Lab in AI. The usual caveats apply.

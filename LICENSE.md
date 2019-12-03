@@ -1,6 +1,6 @@
 # MIT License
 
-Copyright (c) 2019 Thibault Senegas ; Thierry Warin ; Martin Paquette
+Copyright (c) 2019 Thierry Warin
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
