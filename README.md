@@ -19,7 +19,7 @@ the Sustainable Development Goals. In this context, the goal of spiR is
 to allow an easy connection with R to the Social Progress Index in order
 to benefit from the “power of the crowds.”
 
-At the Social Progress Imperative, they define “social progress as the
+The Social Progress Imperative defines “social progress as the
 capacity of a society to meet the basic human needs of its citizens,
 establish the building blocks that allow citizens and communities to
 enhance and sustain the quality of their lives, and create the
@@ -36,6 +36,8 @@ shelter and nutrition to rights and education. This exclusive focus on
 measurable outcomes makes the index a useful policy tool that tracks
 changes in society over time.”
 
+## Overview of the available data
+
 The index measures the quality of life for 98% of the world’s
 population. In its current version, the R client provides access to
 global data. In further versions, this R client will include different
@@ -50,15 +52,10 @@ visit this
 [page](https://www.socialprogress.org/index/global/definitions/BHN/0/0).
 See below to have access through spiR to the whole list of indicators.
 
-## Overview of the available data
-
-Users can recreate in R impactful dashboards and visualizations as the
+Users can create in R impactful dashboards and visualizations as the
 ones found on
-\<www.socialprogress.org\>:
+\<www.socialprogress.org\>, for instance here <https://www.socialprogress.org/?tab=2&amp;code=NOR&amp;embedded=true>.
 
-<iframe src="https://www.socialprogress.org/?tab=2&amp;code=NOR&amp;embedded=true" width="1060" height="1100" frameborder="0" frameBorder="0">
-
-</iframe>
 
 ## Installation
 
