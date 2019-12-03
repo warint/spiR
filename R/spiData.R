@@ -1,54 +1,66 @@
-#' sqs_spi_data
-#'
-#'@description This function allows you to find and display the Social Progress Index data according to the selected parameters.
-#'
-#'If no arguments are filed, all data will be displayed.
-#'
-#' @param COUNTRY_CODE A country code associated to the Social Progress Index.
-#' @param INDICATOR_CODE A Indicator code associated to the Social Progress Index.
-#' @param YEAR A year for which you want data
-#'
-#' @return Data for the country, indicator and year requested
-#' @export
-#' @import dplyr gsheet
-#'
-#' @seealso \code{\link{sqs_spi_symbol}} for the SPI's indicator symbol and \code{\link{sqs_spi_country}} for the SPI's country code.
-#' @examples
-#'myData <- sqs_spi_data("CAN","AIC_4","2018")
-#'DataFromAllYears <- sqs_spi_data("CAN","AIC_4",)
-#'DataFromAllCountries <- sqs_spi_data(,"AIC_4","2018")
-#'DataFromAllIndicators <- sqs_spi_data("CAB",,"2018")
-sqs_spi_data <- function(COUNTRY_CODE,INDICATOR_CODE,YEAR){
+# Function 1: Data collection
 
-  SPI_data <- gsheet2tbl("https://docs.google.com/spreadsheets/d/1_nQ9mQU_4J0KDRc4_TMzTsJHMYBqLwwnPaMC5BVhkGc/edit#gid=0")
+SPI_data <- gsheet::gsheet2tbl("https://docs.google.com/spreadsheets/d/1_nQ9mQU_4J0KDRc4_TMzTsJHMYBqLwwnPaMC5BVhkGc/edit#gid=0")
+data_long <- reshape2::melt(SPI_data,
+  # ID variables - all the variables to keep but not split apart on
+  id.vars = c("countryName", "code", "year"),
+  # The source columns
+  measure.vars = colnames(SPI_data)[6:ncol(SPI_data)],
+  # Name of the destination column that will identify the original
+  # column that the measurement came from
+  variable.name = "indicator",
+  value.name = "value"
+)
 
-  if ((missing(COUNTRY_CODE))&(missing(INDICATOR_CODE))) {
+# Creating the default values for the function query
 
-    SPI_data %>% filter(year == YEAR)
+data_long_country <- unique(data_long[, 2])
+data_long_year <- unique(data_long[, 3])
+data_long_indicator <- unique(data_long[, 4])
 
-  } else if ((missing(COUNTRY_CODE))&(missing(YEAR))) {
-
-    SPI_data %>% select(country,year,INDICATOR_CODE)
-
-  } else if ((missing(INDICATOR_CODE))&(missing(YEAR))) {
-
-    SPI_data %>% filter(code == COUNTRY_CODE)
-
-  }else if (missing(COUNTRY_CODE)){
-
-    SPI_data %>% filter(year == YEAR) %>% select(country,year,INDICATOR_CODE)
-
-  } else if (missing(YEAR)) {
-
-    SPI_data %>% filter(code == COUNTRY_CODE) %>% select(country,year,INDICATOR_CODE)
-
-  } else if (missing(INDICATOR_CODE)) {
-
-    SPI_data %>% filter(code == COUNTRY_CODE) %>% filter(year == YEAR)
-
-  } else {
-
-    SPI_data %>% filter (code == COUNTRY_CODE) %>% filter(year == YEAR) %>% select(country,year,INDICATOR_CODE)
-  }
-
+sqs_spi_data <- function(country = data_long_country, years = data_long_year, indicators = data_long_indicator) {
+  out <- subset(data_long, code %in% country & year %in% years & indicator %in% indicators)
+  return(out)
 }
+
+# Function 2: Indicators' symbols reconciliation
+
+sqs_spi_symbol <- function(indicators) {
+  SPI_Indicators <- gsheet::gsheet2tbl("https://docs.google.com/spreadsheets/d/1_nQ9mQU_4J0KDRc4_TMzTsJHMYBqLwwnPaMC5BVhkGc/edit#gid=400714513")
+  if (missing(indicators)) {
+    SPI_Indicators
+  } else {
+    SPI_Indicators[grep(indicators, SPI_Indicators$indicator_name), ]
+  }
+}
+
+# Function 3: Countries' code reconciliation
+
+sqs_spi_country <- function(country) {
+  SPI_data <- gsheet::gsheet2tbl("https://docs.google.com/spreadsheets/d/1_nQ9mQU_4J0KDRc4_TMzTsJHMYBqLwwnPaMC5BVhkGc/edit#gid=0")
+  SPI_country <- unique(SPI_data[, 1:2])
+  if (missing(country)) {
+    SPI_country
+  } else {
+    SPI_country[grep(country, SPI_country$countryName), ]
+  }
+}
+
+## Examples
+
+sqs_spi_data(country = c("USA", "FRA"), years = "2018", )
+sqs_spi_data(country = c("USA", "FRA"), year = c("2018", "2019"), indicators = "SPI")
+sqs_spi_data("USA", "2019", c("SPI", "FOW"))
+sqs_spi_data(, "2018", )
+sqs_spi_data("USA", "2017", )
+sqs_spi_data("USA", , )
+sqs_spi_data(, , )
+sqs_spi_data()
+
+sqs_spi_country()
+sqs_spi_country(country = "Canada")
+sqs_spi_country("Canada")
+
+sqs_spi_symbol()
+sqs_spi_symbol(indicators = "mortality")
+sqs_spi_symbol("mortality")
