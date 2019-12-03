@@ -130,7 +130,7 @@ Warin, T. (2019). spiR: Client for the Social Progress Index. v0.1.0.
  }
 ```
 
-### Why SQS ? hhfg
+### Why SQS ?
 
 SQS stands for SKEMA Quantum Studio, a research and technological
 development centre based in Montreal, Canada, that serves as the engine
