@@ -6,7 +6,7 @@ Authors@R: c(
     person("Thierry", "Warin", email = "thierry.warin@skema.edu", role =c("aut", "cre")),
     person("Thibault", "Senegas", role = "aut"))
 Description: The spirR package allows an easy connection with R to the Social Progress Index.
-Imports: gsheet, dplyr
+Imports: gsheet, dplyr,reshape2
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

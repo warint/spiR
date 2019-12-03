@@ -18,3 +18,9 @@ If no argument is filed, all indicators will be displayed.
 
 This function allows you to find and search the right indicator code from the Social Progress Index you want to use.
 }
+\examples{
+mysymbol <- sqs_spi_symbol()
+mysymbol <- sqs_spi_symbol(indicators = "mortality")
+mysymbol <- sqs_spi_symbol("mortality")
+
+}

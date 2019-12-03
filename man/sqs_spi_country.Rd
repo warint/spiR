@@ -16,3 +16,9 @@ Country's ISO code.
 This function allows you to find and search the right country code associated with the Social Progress Index's Data.
 If no argument is filed, all indicators will be displayed.
 }
+\examples{
+mycountry <- sqs_spi_country()
+mycountry <- sqs_spi_country(country = "Canada")
+mycountry <- sqs_spi_country("Canada")
+
+}
