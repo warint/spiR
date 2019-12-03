@@ -20,6 +20,30 @@ data_long_country <- base::unique(data_long[, 2])
 data_long_year <- base::unique(data_long[, 3])
 data_long_indicator <- base::unique(data_long[, 4])
 
+#' sqs_spi_data
+#'
+#' @description This function allows you to find and display the Social Progress Index data according to the selected parameters.
+#' If no arguments are filed, all data will be displayed.
+#' @param country Countries' ISO code.
+#' @param years Years for which you want data.
+#' @param indicators Indicators from the Social Progress Index.
+#'
+#' @return Data for the country, indicator and year requested
+#' @export
+#'
+#' @examples
+#'sqs_spi_data(country = c("USA", "FRA"), years = "2018", )
+#'sqs_spi_data(country = c("USA", "FRA"), year = c("2018", "2019"), indicators = "SPI")
+#'sqs_spi_data("USA", "2019", c("SPI", "FOW"))
+#'sqs_spi_data(, "2018", )
+#'sqs_spi_data("USA", "2017", )
+#'sqs_spi_data("USA", , )
+#'sqs_spi_data(, , )
+#'sqs_spi_data()
+#'
+#'\seealso{\code{\link{sqs_spi_symbol}} for the SPI's indicator symbol and \code{\link{sqs_spi_country}} for the country's ISO code.
+
+
 sqs_spi_data <- function(country = data_long_country,
                          years = data_long_year,
                          indicators = data_long_indicator) {
@@ -33,6 +57,22 @@ sqs_spi_data <- function(country = data_long_country,
 # Function 2: Indicators' symbols query
 # If the user does not know the code of an indicator, s.he has access to the answer in natural language through this query
 
+#' sqs_spi_symbol
+#'
+#' @description This function allows you to find and search the right indicator code from the Social Progress Index you want to use.
+#' If no argument is filed, all indicators will be displayed.
+#' @param indicators An indicator from the Social Progress Index.
+#' @description This function allows you to find and search the right indicator code from the Social Progress Index you want to use.
+#' @return Indicator code from the Social Progress Index.
+#' @export
+#'
+#' @examples
+#'sqs_spi_symbol()
+#'sqs_spi_symbol(indicators = "mortality")
+#'sqs_spi_symbol("mortality")
+#'
+#'\seealso{\code{\link{sqs_spi_country}} for the SPI's country code and \code{\link{sqs_spi_data}} to collect data when you have both indicator and country code.
+
 sqs_spi_indicator <- function(indicators) {
   spi_indicators_natural_language <- gsheet::gsheet2tbl("https://docs.google.com/spreadsheets/d/1_nQ9mQU_4J0KDRc4_TMzTsJHMYBqLwwnPaMC5BVhkGc/edit#gid=400714513")
   if (missing(indicators)) {
@@ -44,6 +84,22 @@ sqs_spi_indicator <- function(indicators) {
 
 # Function 3: Countries' code reconciliation
 # If the user does not know the ISO code of a country, s.he has access to the answer in natural language through this query
+
+#' sqs_spi_country
+#' @description This function allows you to find and search the right country code associated with the Social Progress Index's Data.
+#' If no argument is filed, all indicators will be displayed.
+#'
+#' @param country The name of the country starting with a capital letter.
+#'
+#' @return Country's ISO code.
+#' @export
+#'
+#' @examples
+#'sqs_spi_country()
+#'sqs_spi_country(country = "Canada")
+#'sqs_spi_country("Canada")
+#'
+#'\seealso{\code{\link{sqs_spi_symbol}} for the SPI's indicator symbol and \code{\link{sqs_spi_country}} for the SPI's country code.
 
 sqs_spi_country <- function(country) {
   spi_countries_natural_language <- unique(spi_data[, 1:2])

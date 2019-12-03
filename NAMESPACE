@@ -2,6 +2,4 @@
 
 export(sqs_spi_country)
 export(sqs_spi_data)
-export(sqs_spi_symbol)
-import(dplyr)
-import(gsheet)
+export(sqs_spi_indicator)
