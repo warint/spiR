@@ -1,8 +1,4 @@
 
-
-# Function 1: Data collection
-
-
 #' sqs_spi_data
 #'
 #' @description This function allows you to find and display the Social Progress Index data according to the selected parameters.
@@ -34,6 +30,18 @@
 #'
 #
 
+# Function 1: Data collection
+
+sqs_spi_data <- function(country = data_long_country,
+                         years = data_long_year,
+                         indicators = data_long_indicator) {
+  var_code <- var_year <- var_indicator <- NULL
+  out <- dplyr::filter(data_long,
+                       var_code %in% country,
+                       var_year %in% years,
+                       var_indicator %in% indicators)
+  return(out)
+}
 
 spi_data <- gsheet::gsheet2tbl("https://docs.google.com/spreadsheets/d/1_nQ9mQU_4J0KDRc4_TMzTsJHMYBqLwwnPaMC5BVhkGc/edit#gid=0")
 
@@ -44,8 +52,8 @@ data_long <- reshape2::melt(spi_data,
                             measure.vars = colnames(spi_data)[6:ncol(spi_data)],
                             # Name of the destination column that will identify the original
                             # column that the measurement came from
-                            #variable.name = "var_indicator",
-                            #value.name = "value"
+                            variable.name = "var_indicator",
+                            value.name = "value"
 )
 
 base::names(data_long) = c("countryName", "var_code", "var_year", "var_indicator", "value")
@@ -58,15 +66,7 @@ data_long_country <- base::unique(data_long[, 2])
 data_long_year <- base::unique(data_long[, 3])
 data_long_indicator <- base::unique(data_long[, 4])
 
-sqs_spi_data <- function(country = data_long_country,
-                         years = data_long_year,
-                         indicators = data_long_indicator) {
-  out <- dplyr::filter(data_long,
-                       var_code %in% country,
-                       var_year %in% years,
-                       var_indicator %in% indicators)
-  return(out)
-}
+
 
 # Function 2: Indicators' symbols query
 # If the user does not know the code of an indicator, s.he has access to the answer in natural language through this query
@@ -124,4 +124,3 @@ sqs_spi_country <- function(country) {
     spi_countries_natural_language[grep(country, spi_countries_natural_language$countryName), ]
   }
 }
-
