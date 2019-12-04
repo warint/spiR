@@ -35,18 +35,6 @@
 #
 
 
-
-
-sqs_spi_data <- function(country = data_long_country,
-                         years = data_long_year,
-                         indicators = data_long_indicator) {
-  out <- dplyr::filter(data_long,
-                       code %in% country,
-                       year %in% years,
-                       indicator %in% indicators)
-  return(out)
-}
-
 spi_data <- gsheet::gsheet2tbl("https://docs.google.com/spreadsheets/d/1_nQ9mQU_4J0KDRc4_TMzTsJHMYBqLwwnPaMC5BVhkGc/edit#gid=0")
 
 data_long <- reshape2::melt(spi_data,
@@ -56,9 +44,12 @@ data_long <- reshape2::melt(spi_data,
                             measure.vars = colnames(spi_data)[6:ncol(spi_data)],
                             # Name of the destination column that will identify the original
                             # column that the measurement came from
-                            variable.name = "indicator",
-                            value.name = "value"
+                            #variable.name = "var_indicator",
+                            #value.name = "value"
 )
+
+base::names(data_long) = c("countryName", "var_code", "var_year", "var_indicator", "value")
+
 
 # Creating the default values for the function query
 # IF an entry is missing, all the observations of this variable will be displayed
@@ -67,6 +58,15 @@ data_long_country <- base::unique(data_long[, 2])
 data_long_year <- base::unique(data_long[, 3])
 data_long_indicator <- base::unique(data_long[, 4])
 
+sqs_spi_data <- function(country = data_long_country,
+                         years = data_long_year,
+                         indicators = data_long_indicator) {
+  out <- dplyr::filter(data_long,
+                       var_code %in% country,
+                       var_year %in% years,
+                       var_indicator %in% indicators)
+  return(out)
+}
 
 # Function 2: Indicators' symbols query
 # If the user does not know the code of an indicator, s.he has access to the answer in natural language through this query
