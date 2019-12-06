@@ -5,6 +5,8 @@
 
 [![Travis build
 status](https://travis-ci.org/warint/spiR.svg?branch=master)](https://travis-ci.org/warint/spiR)
+[![AppVeyor build
+status](https://ci.appveyor.com/api/projects/status/github/warint/spiR?branch=master&svg=true)](https://ci.appveyor.com/project/warint/spiR)
 <!-- badges: end -->
 
 # spiR
