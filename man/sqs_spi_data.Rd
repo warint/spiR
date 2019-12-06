@@ -8,7 +8,7 @@ sqs_spi_data(country = data_long_country, years = data_long_year,
   indicators = data_long_indicator)
 }
 \arguments{
-\item{country}{country Countries' ISO code.}
+\item{country}{Countries' ISO code.}
 
 \item{years}{Years for which you want data.}
 

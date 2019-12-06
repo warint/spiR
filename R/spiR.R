@@ -4,7 +4,7 @@
 #' @description This function allows you to find and display the Social Progress Index data according to the selected parameters.
 #' If no arguments are filed, all data will be displayed.
 #'
-#' @param country country Countries' ISO code.
+#' @param country Countries' ISO code.
 #' @param years Years for which you want data.
 #' @param indicators Indicators from the Social Progress Index.
 #'
