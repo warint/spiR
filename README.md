@@ -58,7 +58,7 @@ Users can recreate in R impactful dashboards and visualizations as the
 ones found on
 \<www.socialprogress.org\>:
 
-<iframe src="https://www.socialprogress.org/?tab=2&amp;code=NOR&amp;embedded=true" width="1060" height="1100" frameborder="0" frameBorder="0">
+<iframe src="https://www.socialprogress.org/?tab=2&amp;code=NOR&amp;embedded=true" width="850" height="1100" frameborder="0" frameBorder="0">
 
 </iframe>
 
