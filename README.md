@@ -55,12 +55,9 @@ See below to have access through spiR to the whole list of indicators.
 ## Overview of the available data
 
 Users can recreate in R impactful dashboards and visualizations as the
-ones found on
-\<www.socialprogress.org\>:
-
-<iframe src="https://www.socialprogress.org/?tab=2&amp;code=NOR&amp;embedded=true" width="850" height="1100" frameborder="0" frameBorder="0">
-
-</iframe>
+ones found on [www.socialprogress.org](http://www.socialprogress.org):
+[click
+here](https://www.socialprogress.org/?tab=2&code=NOR&embedded=true)
 
 ## Installation
 
