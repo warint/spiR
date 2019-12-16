@@ -1,10 +1,10 @@
 ## Resubmission
 
-This is a resubmission. This package did not fail the CRAN's test yet, but we realised there was an issue with Appveyor. We fixed it.
+This is a resubmission.
 
 In this version I have :
 
-* Fixed the Appveyor error by specifying the R version(release)
+* updated the description file based on the proposed changes during our first submission. Thx.
 
 ## Test environments
 * local OS X install, R 3.6.1
