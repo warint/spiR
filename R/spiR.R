@@ -93,7 +93,7 @@ sqs_spi_indicator <- function(indicators) {
   if (missing(indicators)) {
     spi_indicators_natural_language
   } else {
-    spi_indicators_natural_language[grep(indicators, spi_indicators_natural_language$indicator_name), ]
+    spi_indicators_natural_language[grep(indicators, spi_indicators_natural_language$indicator_name, ignore.case = TRUE), ]
   }
 }
 
@@ -104,7 +104,7 @@ sqs_spi_indicator <- function(indicators) {
 #' @description This function allows you to find and search the right country code associated with the Social Progress Index's Data.
 #' If no argument is filed, all indicators will be displayed.
 #'
-#' @param country The name of the country starting with a capital letter.
+#' @param country The name of the country.
 #'
 #' @return Country's ISO code.
 #' @export
@@ -121,6 +121,6 @@ sqs_spi_country <- function(country) {
   if (missing(country)) {
     spi_countries_natural_language
   } else {
-    spi_countries_natural_language[grep(country, spi_countries_natural_language$countryName), ]
+    spi_countries_natural_language[grep(country, spi_countries_natural_language$countryName, ignore.case = TRUE), ]
   }
 }

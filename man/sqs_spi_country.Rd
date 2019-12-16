@@ -7,7 +7,7 @@
 sqs_spi_country(country)
 }
 \arguments{
-\item{country}{The name of the country starting with a capital letter.}
+\item{country}{The name of the country.}
 }
 \value{
 Country's ISO code.
