@@ -13,13 +13,13 @@ status](https://ci.appveyor.com/api/projects/status/github/warint/spiR?branch=ma
 
 # <img src="man/figures/LOGO.png" align="right" />
 
-spiR is an R client to easily access the Social Progress Index database.
 Published by the Social Progress Imperative, a global non profit based
 in Washington, DC, the index proposes a new perspective on social
 challenges and needed efforts to accelerate social progress in line with
 the Sustainable Development Goals. In this context, the goal of spiR is
 to allow an easy connection with R to the Social Progress Index in order
-to benefit from the “power of the crowds.”
+to benefit from the “power of the crowds.” spiR is an R client to easily
+access the Social Progress Index database.
 
 At the Social Progress Imperative, they define “social progress as the
 capacity of a society to meet the basic human needs of its citizens,
