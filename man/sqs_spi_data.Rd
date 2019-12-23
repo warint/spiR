@@ -4,11 +4,8 @@
 \alias{sqs_spi_data}
 \title{sqs_spi_data}
 \usage{
-sqs_spi_data(
-  country = data_long_country,
-  years = data_long_year,
-  indicators = data_long_indicator
-)
+sqs_spi_data(country = data_long_country, years = data_long_year,
+  indicators = data_long_indicator)
 }
 \arguments{
 \item{country}{Countries' ISO code.}

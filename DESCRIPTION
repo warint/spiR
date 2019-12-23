@@ -3,7 +3,7 @@ Type: Package
 Title: Client for Social Progress Index Data
 Version: 0.1.1
 Authors@R: 
-    person("Thierry", "Warin", email = "thierry.warin@skema.edu", role =c("aut", "cre"))
+    person("Thierry", "Warin", email = "thierry.warin@skema.edu", role =c("aut", "cre"), comment = c(ORCID = "0000-0002-5921-3428") )
 Description: Published by the Social Progress Imperative, the Social Progress Index is a synthetic measure of human development across the world. Its goal is to prioritize actions that accelerate social progress <https://www.socialprogress.org/>.
 Imports: gsheet, dplyr,reshape2
 License: MIT + file LICENSE
