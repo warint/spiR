@@ -102,13 +102,14 @@ To cite the spiR package in your work:
 Warin, T. (2019). spiR: Client for the Social Progress Index. v0.1.0.
 
 ```{r,eval=FALSE}
-@Manual{R-spiR,
-   title = {spiR: Client for the Social Progress Index},
-   author = {Thierry Warin},
-   note = {R package version 0.1.0},
-   url = {http://github.com/warint/spiR},
-   year = {2019},
- }
+@article{Warin2019,
+author = "Thierry Warin",
+title = "{spiR: An R Package for the Social Progress Index}",
+year = "2019",
+month = "12",
+url = "https://figshare.com/articles/spiR_Client_for_Social_Progress_Index_Data/11421573",
+doi = "10.6084/m9.figshare.11421573.v2"
+}
 ```
 
 ### Why SQS ?
