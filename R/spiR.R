@@ -2,7 +2,7 @@
 #' sqs_spi_data
 #'
 #' @description This function allows you to find and display the Social Progress Index data according to the selected parameters.
-#' If no arguments are filed, all data will be displayed.
+#' If no arguments are filled, all data will be displayed.
 #'
 #' @param country Countries' ISO code.
 #' @param years Years for which you want data.
