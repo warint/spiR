@@ -4,8 +4,11 @@
 \alias{sqs_spi_data}
 \title{sqs_spi_data}
 \usage{
-sqs_spi_data(country = data_long_country, years = data_long_year,
-  indicators = data_long_indicator)
+sqs_spi_data(
+  country = data_long_country,
+  years = data_long_year,
+  indicators = data_long_indicator
+)
 }
 \arguments{
 \item{country}{Countries' ISO code.}
@@ -19,7 +22,7 @@ Data for the country, indicator and year requested
 }
 \description{
 This function allows you to find and display the Social Progress Index data according to the selected parameters.
-If no arguments are filed, all data will be displayed.
+If no arguments are filled, all data will be displayed.
 }
 \examples{
 myData<- sqs_spi_data(country = c("USA", "FRA"), years = "2018", )
