@@ -4,7 +4,7 @@ Title: Wrapper for the Social Progress Index Data
 Version: 0.1.1
 Authors@R: 
     person("Thierry", "Warin", email = "thierry.warin@skema.edu", role =c("aut", "cre"), comment = c(ORCID = "0000-0002-5921-3428") )
-Description: In 2015, The 17 United Nations' Sustainable Development Goals were adopted. spiR is a wrapper of several open datasets published by the Social Progress Imperative (<https://www.socialprogress.org/>), including the Social Progress Index (a synthetic measure of human development across the world). spiR's goal is to provide data to help policymakers and researchers prioritize actions that accelerate social progress across the world in the context of the Sustainable Development Goals. Please cite: Warin, Th. (2019) "spiR: An R Package for the Social Progress Index", <http://www.doi.org/10.6084/m9.figshare.11421573>.
+Description: In 2015, The 17 United Nations' Sustainable Development Goals were adopted. spiR is a wrapper of several open datasets published by the Social Progress Imperative (<https://www.socialprogress.org/>), including the Social Progress Index (a synthetic measure of human development across the world). spiR's goal is to provide data to help policymakers and researchers prioritize actions that accelerate social progress across the world in the context of the Sustainable Development Goals. Please cite: Warin, Th. (2019) "spiR: An R Package for the Social Progress Index", <doi:10.prefix/suffix>.
 Imports: gsheet, dplyr,reshape2
 License: MIT + file LICENSE
 Encoding: UTF-8
