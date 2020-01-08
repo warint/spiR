@@ -4,7 +4,7 @@ This is a resubmission.
 
 In this version I have :
 
-* updated the description file based on the proposed changes during my previous submission. I made it a little longer and a bit more explicit. Thx.
+* changed the doi address as requested. Thx.
 
 ## Test environments
 * local OS X install, R 3.6.1
