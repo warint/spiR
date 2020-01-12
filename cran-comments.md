@@ -4,7 +4,7 @@ This is a resubmission.
 
 In this version I have :
 
-* changed the doi address as requested. Thx.
+* put single quotes as requested for the name of the package and other software. Thx.
 
 ## Test environments
 * local OS X install, R 3.6.1
