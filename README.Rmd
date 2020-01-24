@@ -67,7 +67,7 @@ sqs_spi_country("Canada") # The ISO code for Canada will be produced
 A user needs to enter the code of the desired indicator. To do so, the following function provides access to all the indicators of interest.
 
 ```{r, eval = FALSE}
-sqs_spi_indicator() # A list of all countries will be produced
+sqs_spi_indicator() # A list of all indicators will be produced
 
 sqs_spi_indicator(indicators = "mortality") # A list with all the variables including "mortlity" will be produced
 
