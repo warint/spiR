@@ -39,12 +39,14 @@ Users can recreate in R impactful dashboards and visualizations as the ones foun
 
 ## Installation
 
-You can install the current development version of 'spiR' with:
+The released version of spiR package is accessible through CRAN and devtools.
 
-```{r, eval = FALSE}
-devtools::install_github("warint/spiR")
+``` r
+install.packages("spiR")
+
+install.packages("devtools")
+devtools::install_github('warint/spiR')
 ```
-
 
 ## How-To
 

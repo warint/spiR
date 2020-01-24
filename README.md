@@ -68,10 +68,14 @@ here](https://www.socialprogress.org/?tab=2&code=NOR&embedded=true)
 
 ## Installation
 
-You can install the current development version of ‘spiR’ with:
+The released version of spiR package is accessible through CRAN and
+devtools.
 
 ``` r
-devtools::install_github("warint/spiR")
+install.packages("iriR")
+
+install.packages("devtools")
+devtools::install_github('warint/iriR')
 ```
 
 ## How-To

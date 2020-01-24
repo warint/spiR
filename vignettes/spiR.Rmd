@@ -39,7 +39,7 @@ Users can recreate in R impactful dashboards and visualizations as the ones foun
 First, install spiR:
 
 ```{r, eval=FALSE}
-devtools::install_github("warint/spiR")
+install.packages("spiR")
 ```
 
 
