@@ -13,6 +13,7 @@ status](https://travis-ci.org/warint/spiR.svg?branch=master)](https://travis-ci.
 status](https://ci.appveyor.com/api/projects/status/github/warint/spiR?branch=master&svg=true)](https://ci.appveyor.com/project/warint/spiR)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/spiR)](https://CRAN.R-project.org/package=spiR)
+[![](http://cranlogs.r-pkg.org/badges/grand-total/spiR?color=blue)](https://cran.r-project.org/package=spiR)
 <!-- badges: end -->
 
 In 2015, The 17 United Nations’ Sustainable Development Goals were
