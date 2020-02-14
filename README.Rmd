@@ -13,14 +13,17 @@ knitr::opts_chunk$set(
 )
 ```
 
+# spiR
+
+# <img src="man/figures/LOGO.png" align="right" />
+
 <!-- badges: start -->
 [![Travis build status](https://travis-ci.org/warint/spiR.svg?branch=master)](https://travis-ci.org/warint/spiR)
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/warint/spiR?branch=master&svg=true)](https://ci.appveyor.com/project/warint/spiR)
+[![CRAN status](https://www.r-pkg.org/badges/version/spiR)](https://CRAN.R-project.org/package=spiR)
+[![](http://cranlogs.r-pkg.org/badges/grand-total/spiR?color=blue)](https://cran.r-project.org/package=spiR)
 <!-- badges: end -->
 
-# 'spiR'
-
-# <img src="man/figures/LOGO.png" align="right" />
 
 In 2015, The 17 United Nations' Sustainable Development Goals were adopted. 'spiR' is a wrapper of several open datasets published by the Social Progress Imperative (<https://www.socialprogress.org/>), including the Social Progress Index (a synthetic measure of human development across the world). 'spiR''s goal is to provide data to help policymakers and researchers prioritize actions that accelerate social progress across the world in the context of the Sustainable Development Goals. The Social Progress Index proposes a new perspective on social challenges and needed efforts to accelerate social progress in line with the Sustainable Development Goals. In this context, the goal of 'spiR' is to allow an easy connection with R to the Social Progress Index in order to benefit from the "power of crowds." 'spiR' is an R wrapper to easily access the Social Progress Index datasets.
 
@@ -39,12 +42,14 @@ Users can recreate in R impactful dashboards and visualizations as the ones foun
 
 ## Installation
 
-You can install the current development version of 'spiR' with:
+The released version of spiR package is accessible through CRAN and devtools.
 
-```{r, eval = FALSE}
-devtools::install_github("warint/spiR")
+``` r
+install.packages("spiR")
+
+install.packages("devtools")
+devtools::install_github('warint/spiR')
 ```
-
 
 ## How-To
 
@@ -65,7 +70,7 @@ sqs_spi_country("Canada") # The ISO code for Canada will be produced
 A user needs to enter the code of the desired indicator. To do so, the following function provides access to all the indicators of interest.
 
 ```{r, eval = FALSE}
-sqs_spi_indicator() # A list of all countries will be produced
+sqs_spi_indicator() # A list of all indicators will be produced
 
 sqs_spi_indicator(indicators = "mortality") # A list with all the variables including "mortlity" will be produced
 

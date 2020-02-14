@@ -1,17 +1,20 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+# spiR
+
+
+
 <!-- badges: start -->
 
 [![Travis build
 status](https://travis-ci.org/warint/spiR.svg?branch=master)](https://travis-ci.org/warint/spiR)
 [![AppVeyor build
 status](https://ci.appveyor.com/api/projects/status/github/warint/spiR?branch=master&svg=true)](https://ci.appveyor.com/project/warint/spiR)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/spiR)](https://CRAN.R-project.org/package=spiR)
+[![](http://cranlogs.r-pkg.org/badges/grand-total/spiR?color=blue)](https://cran.r-project.org/package=spiR)
 <!-- badges: end -->
-
-# ‘spiR’
-
-# <img src="man/figures/LOGO.png" align="right" />
 
 In 2015, The 17 United Nations’ Sustainable Development Goals were
 adopted. ‘spiR’ is a wrapper of several open datasets published by the
@@ -68,10 +71,14 @@ here](https://www.socialprogress.org/?tab=2&code=NOR&embedded=true)
 
 ## Installation
 
-You can install the current development version of ‘spiR’ with:
+The released version of spiR package is accessible through CRAN and
+devtools.
 
 ``` r
-devtools::install_github("warint/spiR")
+install.packages("spiR")
+
+install.packages("devtools")
+devtools::install_github('warint/spiR')
 ```
 
 ## How-To
@@ -95,7 +102,7 @@ A user needs to enter the code of the desired indicator. To do so, the
 following function provides access to all the indicators of interest.
 
 ``` r
-sqs_spi_indicator() # A list of all countries will be produced
+sqs_spi_indicator() # A list of all indicators will be produced
 
 sqs_spi_indicator(indicators = "mortality") # A list with all the variables including "mortlity" will be produced
 
