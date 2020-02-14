@@ -3,8 +3,6 @@
 
 # spiR
 
-
-
 <!-- badges: start -->
 
 [![Travis build

@@ -15,7 +15,6 @@ knitr::opts_chunk$set(
 
 # spiR
 
-# <img src="man/figures/LOGO.png" align="right" />
 
 <!-- badges: start -->
 [![Travis build status](https://travis-ci.org/warint/spiR.svg?branch=master)](https://travis-ci.org/warint/spiR)
