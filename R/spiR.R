@@ -82,7 +82,7 @@ data_long_indicator <- base::unique(data_long[, 4])
 #' @return Data for the country, indicator and year requested
 #' @export
 #'
-#' @name sqs_spi_data-deprecated
+#' @name spiR_data-deprecated
 #'
 #' @seealso \code{\link{sqs_spi_indicator}} for the SPI's indicator symbol and \code{\link{sqs_spi_country}} for the country's ISO code.
 #'
@@ -183,7 +183,7 @@ spi_indicator <- function(indicators) {
 #' @return Indicator code from the Social Progress Index.
 #' @export
 #' @seealso \code{\link{sqs_spi_country}} for the SPI's country code and \code{\link{sqs_spi_data}} to collect data when you have both indicator and country code.
-#' @name sqs_spi_indicator-deprecated
+#' @name spiR_indicator-deprecated
 #' @examples
 #'myIndicator <- sqs_spi_indicator()
 #'myIndicator <- sqs_spi_indicator(indicators = "mortality")
@@ -240,7 +240,7 @@ spi_country <- function(country) {
 #' If no argument is filed, all indicators will be displayed.
 #'
 #' @param country The name of the country.
-#' @name sqs_spi_country-deprecated
+#' @name spiR_country-deprecated
 #' @return Country's ISO code.
 #' @export
 #' @seealso \code{\link{sqs_spi_indicator}} for the SPI's indicators and \code{\link{sqs_spi_data}} to collect data when you have both indicator and country code.
