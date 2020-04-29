@@ -18,7 +18,7 @@ spi_data(
 \item{indicators}{Indicators from the Social Progress Index.}
 }
 \value{
-Data for the country, indicator and year requested
+Data for the country, indicator and year requested.
 }
 \description{
 This function allows you to find and display the Social Progress Index data according to the selected parameters.
@@ -33,7 +33,6 @@ myData<- spi_data("USA", "2017", )
 myData<- spi_data("USA", , )
 myData<- spi_data(, , )
 myData<- spi_data()
-
 
 }
 \seealso{
