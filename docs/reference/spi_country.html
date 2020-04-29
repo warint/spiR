@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Changelog • spiR</title>
+<title>sqs_spi_country — spi_country • spiR</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,9 @@
 
 
 
-<meta property="og:title" content="Changelog" />
+<meta property="og:title" content="sqs_spi_country — spi_country" />
+<meta property="og:description" content="This function allows you to find and search the right country code associated with the Social Progress Index's Data.
+If no argument is filed, all indicators will be displayed." />
 
 
 
@@ -58,7 +60,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-news">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -113,26 +115,44 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-      <h1 data-toc-skip>Changelog <small></small></h1>
-      <small>Source: <a href='https://github.com/warint/iriR/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
+    <h1>sqs_spi_country</h1>
+    <small class="dont-index">Source: <a href='https://github.com/warint/iriR/blob/master/R/spiR.R'><code>R/spiR.R</code></a></small>
+    <div class="hidden name"><code>spi_country.Rd</code></div>
     </div>
 
-    <div id="spir-1-1-900-2020-01-23" class="section level1">
-<h1 class="page-header" data-toc-text="1.1.900">
-<a href="#spir-1-1-900-2020-01-23" class="anchor"></a>spiR 1.1.900 (2020-01-23)<small> Unreleased </small>
-</h1>
-<ul>
-<li>This is the first release of our spiR package. It is now available on CRAN.</li>
-</ul>
-</div>
-  </div>
+    <div class="ref-description">
+    <p>This function allows you to find and search the right country code associated with the Social Progress Index's Data.
+If no argument is filed, all indicators will be displayed.</p>
+    </div>
 
+    <pre class="usage"><span class='fu'>spi_country</span>(<span class='no'>country</span>)</pre>
+
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>country</th>
+      <td><p>The name of the country.</p></td>
+    </tr>
+    </table>
+
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>Country's ISO code.</p>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p><code><a href='spi_indicator.html'>spi_indicator</a></code> for the SPI's indicators and <code><a href='spi_data.html'>spi_data</a></code> to collect data when you have both indicator and country code.</p></div>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='no'>mycountry</span> <span class='kw'>&lt;-</span> <span class='fu'>spi_country</span>()
+<span class='no'>mycountry</span> <span class='kw'>&lt;-</span> <span class='fu'>spi_country</span>(<span class='kw'>country</span> <span class='kw'>=</span> <span class='st'>"Canada"</span>)
+<span class='no'>mycountry</span> <span class='kw'>&lt;-</span> <span class='fu'>spi_country</span>(<span class='st'>"Canada"</span>)</div></pre>
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
     </nav>
   </div>
-
 </div>
 
 
