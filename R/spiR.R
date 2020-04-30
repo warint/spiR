@@ -99,6 +99,9 @@ data_long_indicator <- base::unique(data_long[, 4])
 #'
 #
 
+
+
+
 # Function 1: Data collection (Deprecated)
 
 sqs_spi_data <- function(country = data_long_country,
