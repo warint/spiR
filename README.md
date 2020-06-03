@@ -110,8 +110,7 @@ spi_indicator("mortality") # A list with all the variables including "mortlity" 
 ### Step 3: Getting the data
 
 Once the user knows the ISO code and the indicator’s code, s.he can
-collect the data in a very easy way through this
-function:
+collect the data in a very easy way through this function:
 
 ``` r
 spi_data(country = c("USA", "FRA"), year = c("2018", "2019"), indicators = "SPI") # It generates a data frame of the overall SPI indicator for the USA and France for the years 2018 and 2019
@@ -152,5 +151,5 @@ doi = "10.6084/m9.figshare.11421573.v2"
 
 The author would like to thank the Center for Interuniversity Research
 and Analysis of Organizations (CIRANO, Montreal) for its support, as
-well as Thibault Senegas, Marine Leroi and Martin Paquette at SKEMA
-Global Lab in AI. The usual caveats apply.
+well as Thibault Senegas, Marine Leroi and Martin Paquette. The usual
+caveats apply.

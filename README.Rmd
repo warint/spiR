@@ -119,4 +119,4 @@ doi = "10.6084/m9.figshare.11421573.v2"
 
 ### Acknowledgements
 
-The author would like to thank the Center for Interuniversity Research and Analysis of Organizations (CIRANO, Montreal) for its support, as well as Thibault Senegas, Marine Leroi and Martin Paquette at SKEMA Global Lab in AI. The usual caveats apply.
+The author would like to thank the Center for Interuniversity Research and Analysis of Organizations (CIRANO, Montreal) for its support, as well as Thibault Senegas, Marine Leroi and Martin Paquette. The usual caveats apply.
