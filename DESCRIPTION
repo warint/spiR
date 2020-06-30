@@ -14,5 +14,5 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
-URL: http://github.com/warint/iriR
-BugReports: https://github.com/warint/iriR/issues
+URL: http://github.com/warint/spiR
+BugReports: https://github.com/warint/spiR/issues
