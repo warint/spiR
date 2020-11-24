@@ -38,12 +38,6 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
-<li>
   <a href="articles/spiR.html">Get started</a>
 </li>
 <li>
@@ -103,10 +97,11 @@
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>The released version of spiR package is accessible through CRAN and devtools.</p>
-<div class="sourceCode" id="cb1"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"spiR"</span>)
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"spiR"</span><span class="op">)</span>
 
-<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"devtools"</span>)
-<span class="kw pkg">devtools</span><span class="kw ns">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span>(<span class="st">'warint/spiR'</span>)</pre></div>
+<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span>
+<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">'warint/spiR'</span><span class="op">)</span></code></pre></div>
 </div>
 <div id="how-to" class="section level2">
 <h2 class="hasAnchor">
@@ -115,55 +110,58 @@
 <h3 class="hasAnchor">
 <a href="#step-1-getting-the-countrys-iso-code" class="anchor"></a>Step 1: Getting the country’s ISO code</h3>
 <p>A user needs to enter the ISO code of a country. To have access to this code, the following function provides this information.</p>
-<div class="sourceCode" id="cb2"><pre class="r"><span class="fu"><a href="reference/spi_country.html">spi_country</a></span>() <span class="co"># A list of all countries will be produced</span>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/spi_country.html">spi_country</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># A list of all countries will be produced</span>
 
-<span class="fu"><a href="reference/spi_country.html">spi_country</a></span>(<span class="kw">country</span> <span class="kw">=</span> <span class="st">"Canada"</span>) <span class="co"># The ISO code for Canada will be produced</span>
+<span class="fu"><a href="reference/spi_country.html">spi_country</a></span><span class="op">(</span>country <span class="op">=</span> <span class="st">"Canada"</span><span class="op">)</span> <span class="co"># The ISO code for Canada will be produced</span>
 
-<span class="fu"><a href="reference/spi_country.html">spi_country</a></span>(<span class="st">"Canada"</span>) <span class="co"># The ISO code for Canada will be produced</span></pre></div>
+<span class="fu"><a href="reference/spi_country.html">spi_country</a></span><span class="op">(</span><span class="st">"Canada"</span><span class="op">)</span> <span class="co"># The ISO code for Canada will be produced</span></code></pre></div>
 </div>
 <div id="step-2-getting-the-indicators-code" class="section level3">
 <h3 class="hasAnchor">
 <a href="#step-2-getting-the-indicators-code" class="anchor"></a>Step 2: Getting the indicator’s code</h3>
 <p>A user needs to enter the code of the desired indicator. To do so, the following function provides access to all the indicators of interest.</p>
-<div class="sourceCode" id="cb3"><pre class="r"><span class="fu"><a href="reference/spi_indicator.html">spi_indicator</a></span>() <span class="co"># A list of all indicators will be produced</span>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/spi_indicator.html">spi_indicator</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># A list of all indicators will be produced</span>
 
-<span class="fu"><a href="reference/spi_indicator.html">spi_indicator</a></span>(<span class="kw">indicators</span> <span class="kw">=</span> <span class="st">"mortality"</span>) <span class="co"># A list with all the variables including "mortlity" will be produced</span>
+<span class="fu"><a href="reference/spi_indicator.html">spi_indicator</a></span><span class="op">(</span>indicators <span class="op">=</span> <span class="st">"mortality"</span><span class="op">)</span> <span class="co"># A list with all the variables including "mortlity" will be produced</span>
 
-<span class="fu"><a href="reference/spi_indicator.html">spi_indicator</a></span>(<span class="st">"mortality"</span>) <span class="co"># A list with all the variables including "mortlity" will be produced</span></pre></div>
+<span class="fu"><a href="reference/spi_indicator.html">spi_indicator</a></span><span class="op">(</span><span class="st">"mortality"</span><span class="op">)</span> <span class="co"># A list with all the variables including "mortlity" will be produced</span></code></pre></div>
 </div>
 <div id="step-3-getting-the-data" class="section level3">
 <h3 class="hasAnchor">
 <a href="#step-3-getting-the-data" class="anchor"></a>Step 3: Getting the data</h3>
 <p>Once the user knows the ISO code and the indicator’s code, s.he can collect the data in a very easy way through this function:</p>
-<div class="sourceCode" id="cb4"><pre class="r"><span class="fu"><a href="reference/spi_data.html">spi_data</a></span>(<span class="kw">country</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"USA"</span>, <span class="st">"FRA"</span>), <span class="kw">year</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"2018"</span>, <span class="st">"2019"</span>), <span class="kw">indicators</span> <span class="kw">=</span> <span class="st">"SPI"</span>) <span class="co"># It generates a data frame of the overall SPI indicator for the USA and France for the years 2018 and 2019</span>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/spi_data.html">spi_data</a></span><span class="op">(</span>country <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"USA"</span>, <span class="st">"FRA"</span><span class="op">)</span>, year <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"2018"</span>, <span class="st">"2019"</span><span class="op">)</span>, indicators <span class="op">=</span> <span class="st">"SPI"</span><span class="op">)</span> <span class="co"># It generates a data frame of the overall SPI indicator for the USA and France for the years 2018 and 2019</span>
 
-<span class="fu"><a href="reference/spi_data.html">spi_data</a></span>(<span class="kw">country</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"USA"</span>, <span class="st">"FRA"</span>), <span class="kw">years</span> <span class="kw">=</span> <span class="st">"2018"</span>, ) <span class="co"># It generates a data frame of all the indicators for the USA and France for the year 2018</span>
+<span class="fu"><a href="reference/spi_data.html">spi_data</a></span><span class="op">(</span>country <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"USA"</span>, <span class="st">"FRA"</span><span class="op">)</span>, years <span class="op">=</span> <span class="st">"2018"</span>, <span class="op">)</span> <span class="co"># It generates a data frame of all the indicators for the USA and France for the year 2018</span>
 
-<span class="fu"><a href="reference/spi_data.html">spi_data</a></span>(<span class="st">"USA"</span>, <span class="st">"2019"</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"SPI"</span>, <span class="st">"FOW"</span>)) <span class="co"># It generates a data frame of the SPI and FOW indicators for the USA in 2019</span>
+<span class="fu"><a href="reference/spi_data.html">spi_data</a></span><span class="op">(</span><span class="st">"USA"</span>, <span class="st">"2019"</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"SPI"</span>, <span class="st">"FOW"</span><span class="op">)</span><span class="op">)</span> <span class="co"># It generates a data frame of the SPI and FOW indicators for the USA in 2019</span>
 
-<span class="fu"><a href="reference/spi_data.html">spi_data</a></span>(, <span class="st">"2018"</span>, ) <span class="co"># It generates a data frame for all the countries and all the indicators for 2018</span>
+<span class="fu"><a href="reference/spi_data.html">spi_data</a></span><span class="op">(</span>, <span class="st">"2018"</span>, <span class="op">)</span> <span class="co"># It generates a data frame for all the countries and all the indicators for 2018</span>
 
-<span class="fu"><a href="reference/spi_data.html">spi_data</a></span>(<span class="st">"USA"</span>, <span class="st">"2017"</span>, ) <span class="co"># It generates a data frame of all the indicators for the USA in 2017</span>
+<span class="fu"><a href="reference/spi_data.html">spi_data</a></span><span class="op">(</span><span class="st">"USA"</span>, <span class="st">"2017"</span>, <span class="op">)</span> <span class="co"># It generates a data frame of all the indicators for the USA in 2017</span>
 
-<span class="fu"><a href="reference/spi_data.html">spi_data</a></span>(<span class="st">"USA"</span>, , ) <span class="co"># It generates a data frame of all the indicators for all the years for the USA</span>
+<span class="fu"><a href="reference/spi_data.html">spi_data</a></span><span class="op">(</span><span class="st">"USA"</span>, , <span class="op">)</span> <span class="co"># It generates a data frame of all the indicators for all the years for the USA</span>
 
-<span class="fu"><a href="reference/spi_data.html">spi_data</a></span>(, , ) <span class="co"># It generates a data frame of the complete dataset</span>
+<span class="fu"><a href="reference/spi_data.html">spi_data</a></span><span class="op">(</span>, , <span class="op">)</span> <span class="co"># It generates a data frame of the complete dataset</span>
 
-<span class="fu"><a href="reference/spi_data.html">spi_data</a></span>() <span class="co"># It generates a data frame of the complete dataset</span></pre></div>
+<span class="fu"><a href="reference/spi_data.html">spi_data</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># It generates a data frame of the complete dataset</span></code></pre></div>
 </div>
 <div id="cite-spir" class="section level3">
 <h3 class="hasAnchor">
 <a href="#cite-spir" class="anchor"></a>Cite ‘spiR’</h3>
 <p>To cite the ‘spiR’ package in your work:</p>
 <p>Warin, T. (2019). “spiR: Client for the Social Progress Index. v0.1.0.”</p>
-<div class="sourceCode" id="cb5"><pre class="r">@article{Warin2019,
-author = "Thierry Warin",
-title = "{spiR: An R Package for the Social Progress Index}",
-year = "2019",
-month = "12",
-url = "https://figshare.com/articles/spiR_Client_for_Social_Progress_Index_Data/11421573",
-doi = "10.6084/m9.figshare.11421573.v2"
-}</pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="op">@</span>article{Warin2019,</span>
+<span id="cb5-2"><a href="#cb5-2"></a>author =<span class="st"> "Thierry Warin"</span>,</span>
+<span id="cb5-3"><a href="#cb5-3"></a>title =<span class="st"> "{spiR: An R Package for the Social Progress Index}"</span>,</span>
+<span id="cb5-4"><a href="#cb5-4"></a>year =<span class="st"> "2019"</span>,</span>
+<span id="cb5-5"><a href="#cb5-5"></a>month =<span class="st"> "12"</span>,</span>
+<span id="cb5-6"><a href="#cb5-6"></a>url =<span class="st"> "https://figshare.com/articles/spiR_Client_for_Social_Progress_Index_Data/11421573"</span>,</span>
+<span id="cb5-7"><a href="#cb5-7"></a>doi =<span class="st"> "10.6084/m9.figshare.11421573.v2"</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a>}</span></code></pre></div>
 </div>
 <div id="acknowledgements" class="section level3">
 <h3 class="hasAnchor">
@@ -218,7 +216,7 @@ doi = "10.6084/m9.figshare.11421573.v2"
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.9000.</p>
 </div>
 
       </footer>
