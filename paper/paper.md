@@ -22,7 +22,7 @@ bibliography: paper.bib
 
 # Summary
 
-'spiR' is an R wrapper to access the Social Progress Index datasets easily. The spiR package aims to make two contributions: (1) to give access to new societal and economic data and (2) to integrate easily in a researcher's workflow through the R language.
+'spiR' is an R wrapper to access the Social Progress Index datasets easily. The spiR package aims to make two contributions: (1) to give access to new societal and economic data and (2) to integrate easily in a researcher's workflow through the R language. The repository aims at developing a unified dataset on global social progress, inpired by previous works [@Guidotti2020].
 
 Providing new open data in an integrated way highlights some other principles: open data, open code, open and reproducible science. The novelty of the data, collected and computed by the Social Progress Imperative, whose advisory board is chaired by Professor Michael Porter (Harvard Business School), helps inform better policy decisions to accelerate efforts to drive equitable, inclusive and thriving societies.
 
