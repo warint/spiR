@@ -1,5 +1,4 @@
 
-
 # Function 1: Data collection
 
 #' spi_data
@@ -28,7 +27,6 @@
 #' myData<- spi_data(, , )
 #' myData<- spi_data()
 #'
-
 
 spi_data <- function(country = data_long_country,
                          years = data_long_year,
