@@ -18,9 +18,6 @@ citation_author: Warin
 date: 18 December
 year: 2020
 bibliography: paper.bib
-output: rticles::joss_article
-csl: apa-6th-edition.csl
-journal: JOSS
 ---
 
 # Summary
