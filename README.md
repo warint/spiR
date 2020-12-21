@@ -91,11 +91,11 @@ A user needs to enter the ISO code of a country. To have access to this
 code, the following function provides this information.
 
 ``` r
-spi_country() # A list of all countries will be produced
+spir_country() # A list of all countries will be produced
 
-spi_country(country = "Canada") # The ISO code for Canada will be produced
+spir_country(country = "Canada") # The ISO code for Canada will be produced
 
-spi_country("Canada") # The ISO code for Canada will be produced
+spir_country("Canada") # The ISO code for Canada will be produced
 ```
 
 ### Step 2: Getting the indicator’s code
@@ -104,11 +104,11 @@ A user needs to enter the code of the desired indicator. To do so, the
 following function provides access to all the indicators of interest.
 
 ``` r
-spi_indicator() # A list of all indicators will be produced
+spir_indicator() # A list of all indicators will be produced
 
-spi_indicator(indicators = "mortality") # A list with all the variables including "mortlity" will be produced
+spir_indicator(indicators = "mortality") # A list with all the variables including "mortlity" will be produced
 
-spi_indicator("mortality") # A list with all the variables including "mortlity" will be produced
+spir_indicator("mortality") # A list with all the variables including "mortlity" will be produced
 ```
 
 ### Step 3: Getting the data
@@ -117,22 +117,37 @@ Once the user knows the ISO code and the indicator’s code, s.he can
 collect the data in a very easy way through this function:
 
 ``` r
-spi_data(country = c("USA", "FRA"), year = c("2018", "2019"), indicators = "SPI") # It generates a data frame of the overall SPI indicator for the USA and France for the years 2018 and 2019
+spir_data(country = c("USA", "FRA"), year = c("2018", "2019"), indicators = "SPI") # It generates a data frame of the overall SPI indicator for the USA and France for the years 2018 and 2019
 
-spi_data(country = c("USA", "FRA"), years = "2018", ) # It generates a data frame of all the indicators for the USA and France for the year 2018
+spir_data(country = c("USA", "FRA"), years = "2018", ) # It generates a data frame of all the indicators for the USA and France for the year 2018
 
-spi_data("USA", "2019", c("SPI", "FOW")) # It generates a data frame of the SPI and FOW indicators for the USA in 2019
+spir_data("USA", "2019", c("SPI", "FOW")) # It generates a data frame of the SPI and FOW indicators for the USA in 2019
 
-spi_data(, "2018", ) # It generates a data frame for all the countries and all the indicators for 2018
+spir_data(, "2018", ) # It generates a data frame for all the countries and all the indicators for 2018
 
-spi_data("USA", "2017", ) # It generates a data frame of all the indicators for the USA in 2017
+spir_data("USA", "2017", ) # It generates a data frame of all the indicators for the USA in 2017
 
-spi_data("USA", , ) # It generates a data frame of all the indicators for all the years for the USA
+spir_data("USA", , ) # It generates a data frame of all the indicators for all the years for the USA
 
-spi_data(, , ) # It generates a data frame of the complete dataset
+spir_data(, , ) # It generates a data frame of the complete dataset
 
-spi_data() # It generates a data frame of the complete dataset
+spir_data() # It generates a data frame of the complete dataset
 ```
+
+### Optional Step : Create Visuals
+
+spir\_visual fonction allows to create two types of visuals from the SPI
+data : barchart and linechart.
+
+The first is a barchart of the top 9 countries for the chosen indicator
+and year.
+
+<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
+
+The second is a linechart showing the evolution of the most represented
+countries over time for the chosen indicator.
+
+<img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
 
 ### Cite ‘spiR’
 

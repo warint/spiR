@@ -85,18 +85,6 @@ If no arguments are filled, all data will be displayed." />
 <li>
   <a href="../reference/index.html">Reference</a>
 </li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Articles
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="../articles/joss/paper.html">spiR, An R package to access social progress data</a>
-    </li>
-  </ul>
-</li>
 <li>
   <a href="../news/index.html">Changelog</a>
 </li>
@@ -132,9 +120,9 @@ If no arguments are filled, all data will be displayed.</p>
     </div>
 
     <pre class="usage"><span class='fu'>sqs_spi_data</span><span class='op'>(</span>
-  country <span class='op'>=</span> <span class='va'>data_long_country</span>,
-  years <span class='op'>=</span> <span class='va'>data_long_year</span>,
-  indicators <span class='op'>=</span> <span class='va'>data_long_indicator</span>
+  country <span class='op'>=</span> <span class='va'>spi_country</span>,
+  years <span class='op'>=</span> <span class='va'>spi_year</span>,
+  indicators <span class='op'>=</span> <span class='va'>spi_indicator</span>
 <span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -156,23 +144,21 @@ If no arguments are filled, all data will be displayed.</p>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>Data for the country, indicator and year requested</p>
+    <p>Data for the country, indicator and year requested.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='spiR_indicator-deprecated.html'>sqs_spi_indicator</a></code> for the SPI's indicator symbol and <code><a href='spiR_country-deprecated.html'>sqs_spi_country</a></code> for the country's ISO code.</p></div>
+    <div class='dont-index'><p><code><a href='spir_indicator.html'>spir_indicator</a></code> for the SPI's indicator symbol and <code><a href='spir_country.html'>spir_country</a></code> for the country's ISO code.</p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='va'>myData</span><span class='op'>&lt;-</span> <span class='fu'>sqs_spi_data</span><span class='op'>(</span>country <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"USA"</span>, <span class='st'>"FRA"</span><span class='op'>)</span>, years <span class='op'>=</span> <span class='st'>"2018"</span>, <span class='op'>)</span>
-</div><div class='output co'>#&gt; <span class='warning'>Warning: 'sqs_spi_data()' will be removed in the next version and replaced by the simpler function 'spi_data()'</span></div><div class='input'><span class='va'>myData</span><span class='op'>&lt;-</span> <span class='fu'>sqs_spi_data</span><span class='op'>(</span>country <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"USA"</span>, <span class='st'>"FRA"</span><span class='op'>)</span>, year <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"2018"</span>, <span class='st'>"2019"</span><span class='op'>)</span>, indicators <span class='op'>=</span> <span class='st'>"SPI"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span class='warning'>Warning: 'sqs_spi_data()' will be removed in the next version and replaced by the simpler function 'spi_data()'</span></div><div class='input'><span class='va'>myData</span><span class='op'>&lt;-</span> <span class='fu'>sqs_spi_data</span><span class='op'>(</span><span class='st'>"USA"</span>, <span class='st'>"2019"</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"SPI"</span>, <span class='st'>"FOW"</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span class='warning'>Warning: 'sqs_spi_data()' will be removed in the next version and replaced by the simpler function 'spi_data()'</span></div><div class='input'><span class='va'>myData</span><span class='op'>&lt;-</span> <span class='fu'>sqs_spi_data</span><span class='op'>(</span>, <span class='st'>"2018"</span>, <span class='op'>)</span>
-</div><div class='output co'>#&gt; <span class='warning'>Warning: 'sqs_spi_data()' will be removed in the next version and replaced by the simpler function 'spi_data()'</span></div><div class='input'><span class='va'>myData</span><span class='op'>&lt;-</span> <span class='fu'>sqs_spi_data</span><span class='op'>(</span><span class='st'>"USA"</span>, <span class='st'>"2017"</span>, <span class='op'>)</span>
-</div><div class='output co'>#&gt; <span class='warning'>Warning: 'sqs_spi_data()' will be removed in the next version and replaced by the simpler function 'spi_data()'</span></div><div class='input'><span class='va'>myData</span><span class='op'>&lt;-</span> <span class='fu'>sqs_spi_data</span><span class='op'>(</span><span class='st'>"USA"</span>, , <span class='op'>)</span>
-</div><div class='output co'>#&gt; <span class='warning'>Warning: 'sqs_spi_data()' will be removed in the next version and replaced by the simpler function 'spi_data()'</span></div><div class='input'><span class='va'>myData</span><span class='op'>&lt;-</span> <span class='fu'>sqs_spi_data</span><span class='op'>(</span>, , <span class='op'>)</span>
-</div><div class='output co'>#&gt; <span class='warning'>Warning: 'sqs_spi_data()' will be removed in the next version and replaced by the simpler function 'spi_data()'</span></div><div class='input'><span class='va'>myData</span><span class='op'>&lt;-</span> <span class='fu'>sqs_spi_data</span><span class='op'>(</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span class='warning'>Warning: 'sqs_spi_data()' will be removed in the next version and replaced by the simpler function 'spi_data()'</span></div><div class='input'>
-
-</div></pre>
+</div><div class='output co'>#&gt; <span class='warning'>Warning: 'sqs_spi_data()' will be removed in the next version and replaced by the simpler function 'spir_data()'</span></div><div class='input'><span class='va'>myData</span><span class='op'>&lt;-</span> <span class='fu'>sqs_spi_data</span><span class='op'>(</span>country <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"USA"</span>, <span class='st'>"FRA"</span><span class='op'>)</span>, year <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"2018"</span>, <span class='st'>"2019"</span><span class='op'>)</span>, indicators <span class='op'>=</span> <span class='st'>"SPI"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='warning'>Warning: 'sqs_spi_data()' will be removed in the next version and replaced by the simpler function 'spir_data()'</span></div><div class='input'><span class='va'>myData</span><span class='op'>&lt;-</span> <span class='fu'>sqs_spi_data</span><span class='op'>(</span><span class='st'>"USA"</span>, <span class='st'>"2019"</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"SPI"</span>, <span class='st'>"FOW"</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='warning'>Warning: 'sqs_spi_data()' will be removed in the next version and replaced by the simpler function 'spir_data()'</span></div><div class='input'><span class='va'>myData</span><span class='op'>&lt;-</span> <span class='fu'>sqs_spi_data</span><span class='op'>(</span>, <span class='st'>"2018"</span>, <span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='warning'>Warning: 'sqs_spi_data()' will be removed in the next version and replaced by the simpler function 'spir_data()'</span></div><div class='input'><span class='va'>myData</span><span class='op'>&lt;-</span> <span class='fu'>sqs_spi_data</span><span class='op'>(</span><span class='st'>"USA"</span>, <span class='st'>"2017"</span>, <span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='warning'>Warning: 'sqs_spi_data()' will be removed in the next version and replaced by the simpler function 'spir_data()'</span></div><div class='input'><span class='va'>myData</span><span class='op'>&lt;-</span> <span class='fu'>sqs_spi_data</span><span class='op'>(</span><span class='st'>"USA"</span>, , <span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='warning'>Warning: 'sqs_spi_data()' will be removed in the next version and replaced by the simpler function 'spir_data()'</span></div><div class='input'><span class='va'>myData</span><span class='op'>&lt;-</span> <span class='fu'>sqs_spi_data</span><span class='op'>(</span>, , <span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='warning'>Warning: 'sqs_spi_data()' will be removed in the next version and replaced by the simpler function 'spir_data()'</span></div><div class='input'><span class='va'>myData</span><span class='op'>&lt;-</span> <span class='fu'>sqs_spi_data</span><span class='op'>(</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='warning'>Warning: 'sqs_spi_data()' will be removed in the next version and replaced by the simpler function 'spir_data()'</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

@@ -118,7 +118,7 @@ spir_visual(chart = "bar_1", indicator = "SPI", years = "2020")
 The second is a linechart showing the evolution of the most represented countries over time for the chosen indicator.
 
 ```{r,echo=FALSE}
-spir_visual(chart = "line_1", indicator = "SPI", years = "2015")
+spir_visual(chart = "line_1", indicator = "SPI", years = "2020")
 ```
 
 ### Cite 'spiR'
