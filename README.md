@@ -58,6 +58,10 @@ the years 2014 to 2019.
 
 To see a definition of the indicators, please visit this
 [page](https://www.socialprogress.org/index/global/definitions/BHN/0/0).
+
+To read the methodology summary of the Social Progress Index
+[\[here\]](https://legacy.socialprogress.org/assets/downloads/resources/2020/2020-Social-Progress-Index-Methodology.pdf)
+
 See below to have access through ‘spiR’ to the whole list of indicators.
 
 ## Overview of the available data
@@ -131,6 +135,12 @@ spi_data() # It generates a data frame of the complete dataset
 ```
 
 ### Cite ‘spiR’
+
+If you use the spiR package for research, education, policymaking or
+other related purposes, please cite the package as well as the Social
+Progress Imperative. Consider making them a donation to help them pursue
+the work. Business, social enterprises and investors interested in using
+the Social Progress Index should contact their offices.
 
 To cite the ‘spiR’ package in your work:
 

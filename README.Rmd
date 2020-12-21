@@ -32,7 +32,12 @@ The index measures the quality of life for 98% of the world's population. In its
 
 Three overarching dimensions are (1) Basic Human Needs, (2) Foundations of Wellbeing, and (3) Opportunity. Within each dimension, there are four components that further divide the indicators into thematic categories. The index consists in 51 social and environmental variables, covering the years 2014 to 2019. 
 
-To see a definition of the indicators, please visit this [page](https://www.socialprogress.org/index/global/definitions/BHN/0/0). See below to have access through 'spiR' to the whole list of indicators.
+To see a definition of the indicators, please visit this [page](https://www.socialprogress.org/index/global/definitions/BHN/0/0){target="_blank"}. 
+
+To read the methodology summary of the Social Progress Index [[here]](https://legacy.socialprogress.org/assets/downloads/resources/2020/2020-Social-Progress-Index-Methodology.pdf){target="_blank"}
+
+
+See below to have access through 'spiR' to the whole list of indicators.
 
 ## Overview of the available data
 
@@ -101,6 +106,9 @@ spi_data() # It generates a data frame of the complete dataset
 
 ### Cite 'spiR'
 
+If you use the spiR package for research, education, policymaking or other related purposes, please cite the package as well as the Social Progress Imperative. Consider making them a donation to help them pursue the work. Business, social enterprises and investors interested in using the Social Progress Index should contact their offices.
+
+
 To cite the 'spiR' package in your work:
 
 Warin, T. (2019). "spiR: Client for the Social Progress Index. v0.1.0."
@@ -115,6 +123,10 @@ url = "https://figshare.com/articles/spiR_Client_for_Social_Progress_Index_Data/
 doi = "10.6084/m9.figshare.11421573.v2"
 }
 ```
+
+
+
+
 
 
 ### Acknowledgements

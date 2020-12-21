@@ -28,6 +28,9 @@ At the Social Progress Imperative, they define "social progress as the capacity 
 The index measures the quality of life for 98% of the world's population. In its current version, the R client provides access to global data. In further versions, this R client will include different geographical levels: states, regions, cities and sometimes communities.
 
 Three overarching dimensions are (1) Basic Human Needs, (2) Foundations of Wellbeing, and (3) Opportunity. Within each dimension, there are four components that further divide the indicators into thematic categories. The index consists in 51 social and environmental variables, covering the years 2014 to 2019. 
+
+To read the methodology summary of the Social Progress Index [[here]](https://legacy.socialprogress.org/assets/downloads/resources/2020/2020-Social-Progress-Index-Methodology.pdf){target="_blank"}
+
 To see a definition of the indicators, please visit this [page](https://www.socialprogress.org/index/global/definitions/BHN/0/0). See below to have access through spiR to the whole list of indicators.
 
 Users can recreate in R impactful dashboards and visualizations as the ones found on <www.socialprogress.org>:

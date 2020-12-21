@@ -1,3 +1,3 @@
-# spiR 1.1.900 (2020-01-23)
+# spiR 0.2.900 (2020-12-21)
 
-* This is the first release of our spiR package. It is now available on CRAN.
+* In this version, we have changed the name of the functions by withdrawing the sqs mentions. The old functions will remain available until the next update.
