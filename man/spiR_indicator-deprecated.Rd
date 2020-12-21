@@ -21,8 +21,7 @@ If no argument is filed, all indicators will be displayed.
 myIndicator <- sqs_spi_indicator()
 myIndicator <- sqs_spi_indicator(indicators = "mortality")
 myIndicator <- sqs_spi_indicator("mortality")
-
 }
 \seealso{
-\code{\link{sqs_spi_country}} for the SPI's country code and \code{\link{sqs_spi_data}} to collect data when you have both indicator and country code.
+\code{\link{spir_country}} for the SPI's country code and \code{\link{spir_data}} to collect data when you have both indicator and country code.
 }
