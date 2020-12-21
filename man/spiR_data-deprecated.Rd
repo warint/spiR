@@ -3,7 +3,7 @@
 \name{spiR_data-deprecated}
 \alias{spiR_data-deprecated}
 \alias{sqs_spi_data}
-\title{sqs_spi_data}
+\title{sqs_spi_data (deprecated)}
 \usage{
 sqs_spi_data(
   country = spi_country,
@@ -23,7 +23,7 @@ Data for the country, indicator and year requested.
 }
 \description{
 This function allows you to find and display the Social Progress Index data according to the selected parameters.
-If no arguments are filled, all data will be displayed.
+If no arguments are filled, all data will be displayed. This function will be removed in the next version and replaced by the simpler function 'spir_data()'
 }
 \examples{
 myData<- sqs_spi_data(country = c("USA", "FRA"), years = "2018", )

@@ -3,7 +3,7 @@
 \name{spiR_indicator-deprecated}
 \alias{spiR_indicator-deprecated}
 \alias{sqs_spi_indicator}
-\title{sqs_spi_indicator}
+\title{sqs_spi_indicator(deprecated)}
 \usage{
 sqs_spi_indicator(indicators)
 }
@@ -15,7 +15,7 @@ Indicator code from the Social Progress Index.
 }
 \description{
 This function allows you to find and search the right indicator code from the Social Progress Index you want to use.
-If no argument is filed, all indicators will be displayed.
+If no argument is filed, all indicators will be displayed. This function will be removed in the next version and replaced by the simpler function 'spir_indicator()'
 }
 \examples{
 myIndicator <- sqs_spi_indicator()

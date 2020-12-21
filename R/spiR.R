@@ -66,10 +66,10 @@ spir_data <- function(country = spi_country,
 
 # Function 1 (deprecated): Data collection
 
-#' sqs_spi_data
+#' sqs_spi_data (deprecated)
 #'
 #' @description This function allows you to find and display the Social Progress Index data according to the selected parameters.
-#' If no arguments are filled, all data will be displayed.
+#' If no arguments are filled, all data will be displayed. This function will be removed in the next version and replaced by the simpler function 'spir_data()'
 #'
 #' @param country Countries' ISO code.
 #' @param years Years for which you want data.
@@ -150,10 +150,10 @@ spir_indicator <- function(indicators) {
 # Function 2 (deprecated): Indicators' symbols query
 # If the user does not know the code of an indicator, s.he has access to the answer in natural language through this query
 
-#' sqs_spi_indicator
+#' sqs_spi_indicator(deprecated)
 #'
 #' @description This function allows you to find and search the right indicator code from the Social Progress Index you want to use.
-#' If no argument is filed, all indicators will be displayed.
+#' If no argument is filed, all indicators will be displayed. This function will be removed in the next version and replaced by the simpler function 'spir_indicator()'
 #'
 #' @param indicators An indicator from the Social Progress Index.
 #'
@@ -169,6 +169,11 @@ spir_indicator <- function(indicators) {
 #'myIndicator <- sqs_spi_indicator("mortality")
 
 sqs_spi_indicator <- function(indicators) {
+  .Deprecated(msg = "'sqs_spi_indicator()' will be removed in the next version and replaced by the simpler function 'spir_indicator()'")
+
+  # In the next version, we will uncomment the next line:
+  # .Defunct(msg = "'sqs_spi_indicator()' has been removed from this package and replaced with 'spir_indicator()'")
+
   spi_indicators_natural_language <- SPI_indicator
   if (missing(indicators)) {
     spi_indicators_natural_language
@@ -211,10 +216,10 @@ spir_country <- function(country) {
 # Function 3 (deprecated): Countries' code reconciliation
 # If the user does not know the ISO code of a country, s.he has access to the answer in natural language through this query
 
-#' sqs_spi_country
+#' sqs_spi_country (deprecated)
 #'
 #' @description This function allows you to find and search the right country code associated with the Social Progress Index's Data.
-#' If no argument is filed, all indicators will be displayed.
+#' If no argument is filed, all indicators will be displayed. This function will be removed in the next version and replaced by the simpler function 'spir_country()'
 #'
 #' @param country The name of the country.
 #' @name spiR_country-deprecated
@@ -229,6 +234,10 @@ spir_country <- function(country) {
 #'
 
 sqs_spi_country <- function(country) {
+  .Deprecated(msg = "'sqs_spi_country()' will be removed in the next version and replaced by the simpler function 'spir_country()'")
+
+  # In the next version, we will uncomment the next line:
+  # .Defunct(msg = "'sqs_spi_country()' has been removed from this package and replaced with 'spir_country()'")
   spi_countries_natural_language <- unique(SPI_data[, 2:3])
   if (missing(country)) {
     spi_countries_natural_language

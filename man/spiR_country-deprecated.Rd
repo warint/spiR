@@ -3,7 +3,7 @@
 \name{spiR_country-deprecated}
 \alias{spiR_country-deprecated}
 \alias{sqs_spi_country}
-\title{sqs_spi_country}
+\title{sqs_spi_country (deprecated)}
 \usage{
 sqs_spi_country(country)
 }
@@ -15,7 +15,7 @@ Country's ISO code.
 }
 \description{
 This function allows you to find and search the right country code associated with the Social Progress Index's Data.
-If no argument is filed, all indicators will be displayed.
+If no argument is filed, all indicators will be displayed. This function will be removed in the next version and replaced by the simpler function 'spir_country()'
 }
 \examples{
 mycountry <- sqs_spi_country()
