@@ -4,7 +4,8 @@ This is a resubmission.
 
 In this version I have :
 
-* put single quotes as requested for the name of the package and other software. Thx.
+* changed the name of the functions by withdrawing the sqs mentions.
+* have added a new function, spir_visual, allowing people to create visuals from the SPI data.
 
 ## Test environments
 * local OS X install, R 3.6.1
@@ -19,5 +20,5 @@ In this version I have :
 ## Downstream dependencies
 There are currently no downstream dependencies for this package.
 
-* This is a new release.
+* This is an update.
 

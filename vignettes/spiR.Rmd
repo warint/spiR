@@ -1,5 +1,5 @@
 ---
-title: "spiRData"
+title: "spiR"
 author: "Thierry Warin"
 output: rmarkdown::html_vignette
 vignette: >
