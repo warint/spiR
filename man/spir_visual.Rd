@@ -26,3 +26,6 @@ Chosen Graph
 \description{
 This function allows you to create 2 types of visuals: bar and line charts.
 }
+\examples{
+spir_visual(chart = "bar_1", indicator = "SPI", years = "2020")
+}

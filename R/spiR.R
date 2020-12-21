@@ -257,7 +257,7 @@ sqs_spi_country <- function(country) {
 #' @export
 #'
 #' @examples
-#'spir_visual(chat = "bar1", indicator = "SPI, years = "2020')
+#'spir_visual(chart = "bar_1", indicator = "SPI", years = "2020")
 
 spir_visual <- function(chart = "bar_1", indicator = "SPI", years = max(SPI_data$year), title = TRUE){
 
@@ -278,37 +278,37 @@ spir_visual <- function(chart = "bar_1", indicator = "SPI", years = max(SPI_data
     barchart1$country_name <- factor(barchart1$country_name, levels = unique(barchart1$country_name)[order(barchart1$value)])
     barchart1$value <- format(round(barchart1$value, 2), nsmall = 2)
      if(title == TRUE){
-       ggplot2::ggplot(data = barchart1, aes(x = country_name, y = value, fill = country_name)) +
+       ggplot2::ggplot(data = barchart1, ggplot2::aes(x = country_name, y = value, fill = country_name)) +
          ggplot2::geom_col() +
-         ggplot2::geom_text(aes(label=value), vjust=0.2, hjust = 1.1, colour = "white", size = 3.2, fontface = "bold") +
+         ggplot2::geom_text(ggplot2::aes(label=value), vjust=0.2, hjust = 1.1, colour = "white", size = 3.2, fontface = "bold") +
          ggplot2::ylab("")  +
          ggplot2::xlab("") +
          ggplot2::ggtitle(paste(unique(barchart1$indicator_name), "in", years)) +
          ggplot2::theme_minimal() +
          ggplot2::guides(fill=FALSE) +
          ggsci::scale_fill_uchicago() +
-         ggplot2::theme(legend.position="none", plot.title = element_text(size=12))  +
+         ggplot2::theme(legend.position="none", plot.title = ggplot2::element_text(size=12))  +
          ggplot2::labs(fill = "Countries", caption="Source: Warin (2020) & Social Progress Index.") +
          ggplot2::coord_flip() +
-         ggplot2::theme(axis.title.x=element_blank(),
-               axis.ticks.x=element_blank(),
-               axis.text.x=element_blank())
+         ggplot2::theme(axis.title.x=ggplot2::element_blank(),
+               axis.ticks.x=ggplot2::element_blank(),
+               axis.text.x=ggplot2::element_blank())
     } else {
-      ggplot2::ggplot(data = barchart1, aes(x = country_name, y = value, fill = country_name)) +
+      ggplot2::ggplot(data = barchart1, ggplot2::aes(x = country_name, y = value, fill = country_name)) +
         ggplot2::geom_col() +
-        ggplot2::geom_text(aes(label=value), vjust=0.2, hjust = 1.1, colour = "white", size = 3.2, fontface = "bold") +
+        ggplot2::geom_text(ggplot2::aes(label=value), vjust=0.2, hjust = 1.1, colour = "white", size = 3.2, fontface = "bold") +
         ggplot2::ylab("")  +
         ggplot2::xlab("") +
         ggtitle("") +
         ggplot2::theme_minimal() +
         ggplot2::guides(fill=FALSE) +
         ggsci::scale_fill_uchicago() +
-        ggplot2:: theme(legend.position="none", plot.title = element_text(size=12))  +
+        ggplot2:: theme(legend.position="none", plot.title = ggplot2::element_text(size=12))  +
         ggplot2::labs(fill = "Countries", caption="Source: Warin (2020) & Social Progress Index.") +
         ggplot2::coord_flip() +
-        ggplot2::theme(axis.title.x=element_blank(),
-              axis.text.x=element_blank(),
-              axis.ticks.x=element_blank())
+        ggplot2::theme(axis.title.x=ggplot2::element_blank(),
+              axis.text.x=ggplot2::element_blank(),
+              axis.ticks.x=ggplot2::element_blank())
     }
   } else if(chart == "line_1"){
     linechart1 <- SPI_data
@@ -319,7 +319,7 @@ spir_visual <- function(chart = "bar_1", indicator = "SPI", years = max(SPI_data
     linechart1 <- dplyr::filter(linechart1, country_code %in% countries)
     linechart1$year <- lubridate::ymd(linechart1$year, truncated = 2L)
     if(title == TRUE){
-      ggplot2::ggplot(data = linechart1, aes(x = year, y = value, color = country_name, shape = country_name)) +
+      ggplot2::ggplot(data = linechart1, ggplot2::aes(x = year, y = value, color = country_name, shape = country_name)) +
         ggplot2::geom_line() +
         ggplot2::geom_point(size = 2, stroke = 1) +
         ggplot2::ylab("")  +
@@ -328,10 +328,10 @@ spir_visual <- function(chart = "bar_1", indicator = "SPI", years = max(SPI_data
         ggplot2::theme_minimal() +
         ggplot2::guides(fill=FALSE) +
         ggsci::scale_color_uchicago() +
-        ggplot2::theme(legend.position="right", plot.title = element_text(size=12))  +
+        ggplot2::theme(legend.position="right", plot.title = ggplot2::element_text(size=12))  +
         ggplot2::labs(shape = "Countries", color = "Countries", caption="Source: Warin (2020) & Social Progress Index.")
     } else {
-      ggplot2::ggplot(data = linechart1, aes(x = year, y = value, color = country_name, shape = country_name)) +
+      ggplot2::ggplot(data = linechart1, ggplot2::aes(x = year, y = value, color = country_name, shape = country_name)) +
         ggplot2::geom_line() +
         ggplot2::ylab("")  +
         ggplot2::xlab("") +
@@ -340,7 +340,7 @@ spir_visual <- function(chart = "bar_1", indicator = "SPI", years = max(SPI_data
         ggplot2::guides(fill=FALSE) +
         ggplot2::geom_point(size = 2, stroke = 1) +
         ggsci::scale_color_uchicago() +
-        ggplot2::theme(legend.position="right", plot.title = element_text(size=12))  +
+        ggplot2::theme(legend.position="right", plot.title = ggplot2::element_text(size=12))  +
         ggplot2::labs(shape = "Countries", color = "Countries", caption="Source: Warin (2020) & Social Progress Index.")
     }
   } else{
