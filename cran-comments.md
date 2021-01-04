@@ -1,6 +1,6 @@
 ## Resubmission
 
-This is a resubmission.
+This is a resubmission (update).
 
 In this version I have :
 
