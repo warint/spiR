@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 [![Travis build status](https://travis-ci.org/warint/spiR.svg?branch=master)](https://travis-ci.org/warint/spiR)
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/warint/spiR?branch=master&svg=true)](https://ci.appveyor.com/project/warint/spiR)
 [![CRAN status](https://www.r-pkg.org/badges/version/spiR)](https://CRAN.R-project.org/package=spiR)
-[![](http://cranlogs.r-pkg.org/badges/grand-total/spiR?color=blue)](https://cran.r-project.org/package=spiR)
+[![](https://cranlogs.r-pkg.org/badges/grand-total/spiR?color=blue)](https://cran.r-project.org/package=spiR)
 <!-- badges: end -->
 
 
@@ -32,7 +32,7 @@ The index measures the quality of life for 98% of the world's population. In its
 
 Three overarching dimensions are (1) Basic Human Needs, (2) Foundations of Wellbeing, and (3) Opportunity. Within each dimension, there are four components that further divide the indicators into thematic categories. The index consists in 51 social and environmental variables, covering the years 2014 to 2019. 
 
-To see a definition of the indicators, please visit this [page](https://www.socialprogress.org/index/global/definitions/BHN/0/0){target="_blank"}. 
+To see a definition of the indicators, please visit this [page](https://www.socialprogress.org/index/global/definitions/#BHN/0/0){target="_blank"}. 
 
 To read the methodology summary of the Social Progress Index [[here]](https://legacy.socialprogress.org/assets/downloads/resources/2020/2020-Social-Progress-Index-Methodology.pdf){target="_blank"}
 
@@ -41,7 +41,7 @@ See below to have access through 'spiR' to the whole list of indicators.
 
 ## Overview of the available data
 
-Users can recreate in R impactful dashboards and visualizations as the ones found on [www.socialprogress.org](http://www.socialprogress.org){target="_blank"}: [click here](https://www.socialprogress.org/?tab=2&code=NOR&embedded=true){target="_blank"}
+Users can recreate in R impactful dashboards and visualizations as the ones found on [www.socialprogress.org](https://www.socialprogress.org){target="_blank"}: [click here](https://www.socialprogress.org/?tab=2&code=NOR&embedded=true){target="_blank"}
 
 
 ## Installation
@@ -128,7 +128,7 @@ If you use the spiR package for research, education, policymaking or other relat
 
 To cite the 'spiR' package in your work:
 
-Warin, T. (2019). "spiR: Client for the Social Progress Index. v0.1.0."
+Warin, T. (2019). "spiR: Client for the Social Progress Index. v0.2.1."
 
 ```{r,eval=FALSE}
 @article{Warin2019,

@@ -11,7 +11,7 @@ status](https://travis-ci.org/warint/spiR.svg?branch=master)](https://travis-ci.
 status](https://ci.appveyor.com/api/projects/status/github/warint/spiR?branch=master&svg=true)](https://ci.appveyor.com/project/warint/spiR)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/spiR)](https://CRAN.R-project.org/package=spiR)
-[![](http://cranlogs.r-pkg.org/badges/grand-total/spiR?color=blue)](https://cran.r-project.org/package=spiR)
+[![](https://cranlogs.r-pkg.org/badges/grand-total/spiR?color=blue)](https://cran.r-project.org/package=spiR)
 <!-- badges: end -->
 
 In 2015, The 17 United Nations’ Sustainable Development Goals were
@@ -57,7 +57,7 @@ The index consists in 51 social and environmental variables, covering
 the years 2014 to 2019.
 
 To see a definition of the indicators, please visit this
-[page](https://www.socialprogress.org/index/global/definitions/BHN/0/0).
+[page](https://www.socialprogress.org/index/global/definitions/#BHN/0/0).
 
 To read the methodology summary of the Social Progress Index
 [\[here\]](https://legacy.socialprogress.org/assets/downloads/resources/2020/2020-Social-Progress-Index-Methodology.pdf)
@@ -67,7 +67,7 @@ See below to have access through ‘spiR’ to the whole list of indicators.
 ## Overview of the available data
 
 Users can recreate in R impactful dashboards and visualizations as the
-ones found on [www.socialprogress.org](http://www.socialprogress.org):
+ones found on [www.socialprogress.org](https://www.socialprogress.org):
 [click
 here](https://www.socialprogress.org/?tab=2&code=NOR&embedded=true)
 
@@ -159,7 +159,7 @@ the Social Progress Index should contact their offices.
 
 To cite the ‘spiR’ package in your work:
 
-Warin, T. (2019). “spiR: Client for the Social Progress Index. v0.1.0.”
+Warin, T. (2019). “spiR: Client for the Social Progress Index. v0.2.1.”
 
 ``` r
 @article{Warin2019,
