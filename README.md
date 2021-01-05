@@ -57,7 +57,7 @@ The index consists in 51 social and environmental variables, covering
 the years 2014 to 2019.
 
 To see a definition of the indicators, please visit this
-[page](https://www.socialprogress.org/index/global/definitions/#BHN/0/0).
+[page](https://www.socialprogress.org/index/global/definitions/#BHN/0/0/).
 
 To read the methodology summary of the Social Progress Index
 [\[here\]](https://legacy.socialprogress.org/assets/downloads/resources/2020/2020-Social-Progress-Index-Methodology.pdf)
@@ -67,9 +67,9 @@ See below to have access through ‘spiR’ to the whole list of indicators.
 ## Overview of the available data
 
 Users can recreate in R impactful dashboards and visualizations as the
-ones found on [www.socialprogress.org](https://www.socialprogress.org):
+ones found on [www.socialprogress.org](https://www.socialprogress.org/):
 [click
-here](https://www.socialprogress.org/?tab=2&code=NOR&embedded=true)
+here](https://www.socialprogress.org/?tab=2&code=NOR&embedded=true/)
 
 ## Installation
 
@@ -167,7 +167,7 @@ author = "Thierry Warin",
 title = "{spiR: An R Package for the Social Progress Index}",
 year = "2019",
 month = "12",
-url = "https://figshare.com/articles/spiR_Client_for_Social_Progress_Index_Data/11421573",
+url = "https://figshare.com/articles/spiR_Client_for_Social_Progress_Index_Data/11421573/",
 doi = "10.6084/m9.figshare.11421573.v2"
 }
 ```

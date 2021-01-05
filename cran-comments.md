@@ -4,8 +4,9 @@ This is a resubmission (update).
 
 In this version I have :
 
-* changed the name of the functions by withdrawing the sqs mentions.
-* have added a new function, spir_visual, allowing people to create visuals from the SPI data.
+* changed http to https and added trailing slashes.
+* modified the version number as requested. 
+* used the CRAN template for the MIT license.
 
 ## Test environments
 * local OS X install, R 3.6.1
