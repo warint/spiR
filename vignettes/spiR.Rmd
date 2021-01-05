@@ -31,7 +31,7 @@ Three overarching dimensions are (1) Basic Human Needs, (2) Foundations of Wellb
 
 To read the methodology summary of the Social Progress Index [[here]](https://legacy.socialprogress.org/assets/downloads/resources/2020/2020-Social-Progress-Index-Methodology.pdf){target="_blank"}
 
-To see a definition of the indicators, please visit this [page](https://www.socialprogress.org/index/global/definitions/BHN/0/0). See below to have access through spiR to the whole list of indicators.
+To see a definition of the indicators, please visit this [page](https://www.socialprogress.org/index/global/definitions/#BHN/0/0/). See below to have access through spiR to the whole list of indicators.
 
 Users can recreate in R impactful dashboards and visualizations as the ones found on <www.socialprogress.org>:
 
