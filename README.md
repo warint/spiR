@@ -142,10 +142,19 @@ data : barchart and linechart.
 The first is a barchart of the top 9 countries for the chosen indicator
 and year.
 
+``` r
+library(spiR)
+spir_visual(chart = "bar_1", indicator = "SPI", years = "2020")
+```
+
 <img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
 
 The second is a linechart showing the evolution of the most represented
 countries over time for the chosen indicator.
+
+``` r
+spir_visual(chart = "line_1", indicator = "SPI", years = "2020")
+```
 
 <img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
 

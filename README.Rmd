@@ -110,14 +110,14 @@ spir_visual fonction allows to create two types of visuals from the SPI data : b
 The first is a barchart of the top 9 countries for the chosen indicator and year.
 
 
-```{r,echo=FALSE}
+```{r,echo=TRUE}
 library(spiR)
 spir_visual(chart = "bar_1", indicator = "SPI", years = "2020")
 ```
 
 The second is a linechart showing the evolution of the most represented countries over time for the chosen indicator.
 
-```{r,echo=FALSE}
+```{r,echo=TRUE}
 spir_visual(chart = "line_1", indicator = "SPI", years = "2020")
 ```
 

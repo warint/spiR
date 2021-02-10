@@ -50,7 +50,7 @@
 <ul class="nav navbar-nav navbar-right">
 <li>
   <a href="https://github.com/warint/spiR/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -64,8 +64,7 @@
 
       
 
-      </header><script src="spiR_files/accessible-code-block-0.0.1/empty-anchor.js"></script><link href="spiR_files/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet">
-<script src="spiR_files/anchor-sections-1.0.1/anchor-sections.js"></script><div class="row">
+      </header><script src="spiR_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>spiR</h1>
@@ -156,8 +155,13 @@
 <a href="#optional-step-create-visuals" class="anchor"></a>Optional Step : Create Visuals</h3>
 <p>spir_visual fonction allows to create two types of visuals from the SPI data : barchart and linechart.</p>
 <p>The first is a barchart of the top 9 countries for the chosen indicator and year.</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/warint/spiR/">spiR</a></span><span class="op">)</span>
+<span class="fu"><a href="../reference/spir_visual.html">spir_visual</a></span><span class="op">(</span>chart <span class="op">=</span> <span class="st">"bar_1"</span>, indicator <span class="op">=</span> <span class="st">"SPI"</span>, years <span class="op">=</span> <span class="st">"2020"</span><span class="op">)</span></code></pre></div>
 <p><img src="spiR_files/figure-html/unnamed-chunk-7-1.png" width="700"></p>
 <p>The second is a linechart showing the evolution of the most represented countries over time for the chosen indicator.</p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/spir_visual.html">spir_visual</a></span><span class="op">(</span>chart <span class="op">=</span> <span class="st">"line_1"</span>, indicator <span class="op">=</span> <span class="st">"SPI"</span>, years <span class="op">=</span> <span class="st">"2020"</span><span class="op">)</span></code></pre></div>
 <p><img src="spiR_files/figure-html/unnamed-chunk-8-1.png" width="700"></p>
 </div>
 </div>
