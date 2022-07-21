@@ -13,7 +13,7 @@ url <- paste0("https://warin.ca/datalake/spiR/SPI_indicator.csv")
 path <- file.path(tempdir(), "temp.csv")
 curl::curl_download(url, path)
 csv_file <- file.path(paste0(tempdir(), "/temp.csv"))
-SPI_indicator <- readr::read_csv(csv_file)
+SPI_indicator <- readr::read_csv(csv_file, num_threads = 1)
 
 # Creating the default values for the function query
 # IF an entry is missing, all the observations of this variable will be displayed
